@@ -1,0 +1,1104 @@
+Script started on Thu 26 Jan 2017 11:20:16 PM EST
+]0;bluzix@behemoth: ~/Documents/MobileComp/P1bluzix@behemoth:~/Documents/MobileComp/P1$ ssh -X -i s[K~/Keystore/EC2/slincoln-ceg3900-aws--ec2-key.pem ubuntu@ec2-54-213-198-66.us-west-2/compute.amazonaws.com[1Pcompute.amazonaws.com.compute.amazonaws.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+The authenticity of host 'ec2-54-213-198-66.us-west-2.compute.amazonaws.com (54.213.198.66)' can't be established.
+ECDSA key fingerprint is SHA256:uZdbIOpeLdn0KRGM4qhcOXBQXP096UyuHKsc1MgyU5U.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-54-213-198-66.us-west-2.compute.amazonaws.com,54.213.198.66' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-53-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+/usr/bin/xauth:  file /home/ubuntu/.Xauthority does not exist
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ ps -aux; df -Th; more /etc/passwd
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.2  0.5  37956  6060 ?        Ss   03:57   0:03 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    03:57   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    03:57   0:00 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   03:57   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        S    03:57   0:00 [kworker/u30:0]
+root         7  0.0  0.0      0     0 ?        S    03:57   0:00 [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    03:57   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    03:57   0:00 [migration/0]
+root        10  0.0  0.0      0     0 ?        S    03:57   0:00 [watchdog/0]
+root        11  0.0  0.0      0     0 ?        S    03:57   0:00 [kdevtmpfs]
+root        12  0.0  0.0      0     0 ?        S<   03:57   0:00 [netns]
+root        13  0.0  0.0      0     0 ?        S<   03:57   0:00 [perf]
+root        14  0.0  0.0      0     0 ?        S    03:57   0:00 [xenwatch]
+root        15  0.0  0.0      0     0 ?        S    03:57   0:00 [xenbus]
+root        17  0.0  0.0      0     0 ?        S    03:57   0:00 [khungtaskd]
+root        18  0.0  0.0      0     0 ?        S<   03:57   0:00 [writeback]
+root        19  0.0  0.0      0     0 ?        SN   03:57   0:00 [ksmd]
+root        20  0.0  0.0      0     0 ?        SN   03:57   0:00 [khugepaged]
+root        21  0.0  0.0      0     0 ?        S<   03:57   0:00 [crypto]
+root        22  0.0  0.0      0     0 ?        S<   03:57   0:00 [kintegrityd]
+root        23  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        24  0.0  0.0      0     0 ?        S<   03:57   0:00 [kblockd]
+root        25  0.0  0.0      0     0 ?        S<   03:57   0:00 [ata_sff]
+root        26  0.0  0.0      0     0 ?        S<   03:57   0:00 [md]
+root        27  0.0  0.0      0     0 ?        S<   03:57   0:00 [devfreq_wq]
+root        28  0.0  0.0      0     0 ?        S    03:57   0:00 [kworker/u30:1]
+root        30  0.0  0.0      0     0 ?        S    03:57   0:00 [kswapd0]
+root        31  0.0  0.0      0     0 ?        S<   03:57   0:00 [vmstat]
+root        32  0.0  0.0      0     0 ?        S    03:57   0:00 [fsnotify_mark]
+root        33  0.0  0.0      0     0 ?        S    03:57   0:00 [ecryptfs-kthrea]
+root        49  0.0  0.0      0     0 ?        S<   03:57   0:00 [kthrotld]
+root        50  0.0  0.0      0     0 ?        S<   03:57   0:00 [acpi_thermal_pm]
+root        51  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        52  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        53  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        54  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        55  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        56  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        57  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        58  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        59  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        60  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        61  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        62  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        63  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        64  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        65  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        66  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        67  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        68  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        69  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        70  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        71  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        72  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        73  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        74  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        75  0.0  0.0      0     0 ?        S    03:57   0:00 [scsi_eh_0]
+root        76  0.0  0.0      0     0 ?        S<   03:57   0:00 [scsi_tmf_0]
+root        77  0.0  0.0      0     0 ?        S    03:57   0:00 [scsi_eh_1]
+root        78  0.0  0.0      0     0 ?        S<   03:57   0:00 [scsi_tmf_1]
+root        80  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root        84  0.0  0.0      0     0 ?        S<   03:57   0:00 [ipv6_addrconf]
+root        98  0.0  0.0      0     0 ?        S<   03:57   0:00 [deferwq]
+root        99  0.0  0.0      0     0 ?        S<   03:57   0:00 [charger_manager]
+root       139  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root       140  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root       141  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root       142  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root       143  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root       144  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root       145  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root       146  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root       147  0.0  0.0      0     0 ?        S<   03:57   0:00 [kpsmoused]
+root       261  0.0  0.0      0     0 ?        S<   03:57   0:00 [raid5wq]
+root       294  0.0  0.0      0     0 ?        S<   03:57   0:00 [bioset]
+root       318  0.0  0.0      0     0 ?        S    03:57   0:00 [jbd2/xvda1-8]
+root       319  0.0  0.0      0     0 ?        S<   03:57   0:00 [ext4-rsv-conver]
+root       377  0.0  0.6  36932  6924 ?        Ss   03:57   0:00 /lib/systemd/systemd-jo
+root       397  0.0  0.0      0     0 ?        S<   03:57   0:00 [iscsi_eh]
+root       402  0.0  0.0      0     0 ?        S<   03:57   0:00 [ib_addr]
+root       403  0.0  0.0      0     0 ?        S<   03:57   0:00 [ib_mcast]
+root       404  0.0  0.0      0     0 ?        S<   03:57   0:00 [ib_nl_sa_wq]
+root       405  0.0  0.0      0     0 ?        S<   03:57   0:00 [ib_cm]
+root       406  0.0  0.0      0     0 ?        S<   03:57   0:00 [iw_cm_wq]
+root       407  0.0  0.0      0     0 ?        S    03:57   0:00 [kauditd]
+root       408  0.0  0.0      0     0 ?        S<   03:57   0:00 [rdma_cm]
+root       435  0.0  0.1  94772  1696 ?        Ss   03:57   0:00 /sbin/lvmetad -f
+root       454  0.0  0.0      0     0 ?        S    03:57   0:00 [kworker/0:4]
+root       470  0.0  0.4  42768  4128 ?        Ss   03:57   0:00 /lib/systemd/systemd-ud
+root       540  0.0  0.0      0     0 ?        S<   03:57   0:00 [kworker/0:1H]
+systemd+   542  0.0  0.2 100324  2552 ?        Ssl  03:57   0:00 /lib/systemd/systemd-ti
+root       930  0.0  0.2  16120  2828 ?        Ss   03:57   0:00 /sbin/dhclient -1 -v -p
+root      1086  0.0  0.0   5224   160 ?        Ss   03:57   0:00 /sbin/iscsid
+root      1087  0.0  0.3   5724  3524 ?        S<Ls 03:57   0:00 /sbin/iscsid
+root      1093  0.0  1.3 258188 13796 ?        Ssl  03:57   0:00 /usr/lib/snapd/snapd
+root      1096  0.0  0.2  26068  2588 ?        Ss   03:57   0:00 /usr/sbin/cron -f
+syslog    1104  0.0  0.9 260632  9828 ?        Ssl  03:57   0:00 /usr/sbin/rsyslogd -n
+root      1117  0.0  0.1  95368  1384 ?        Ssl  03:57   0:00 /usr/bin/lxcfs /var/lib
+root      1122  0.0  0.5 272944  5836 ?        Ssl  03:57   0:00 /usr/lib/accountsservic
+daemon    1124  0.0  0.2  26044  2184 ?        Ss   03:57   0:00 /usr/sbin/atd -f
+root      1143  0.0  0.3  28548  3076 ?        Ss   03:57   0:00 /lib/systemd/systemd-lo
+root      1145  0.0  0.1   4400  1320 ?        Ss   03:57   0:00 /usr/sbin/acpid
+message+  1152  0.0  0.3  42900  3760 ?        Ss   03:57   0:00 /usr/bin/dbus-daemon --
+root      1202  0.0  0.0  13376   172 ?        Ss   03:57   0:00 /sbin/mdadm --monitor -
+root      1208  0.0  0.5 277180  6084 ?        Ssl  03:57   0:00 /usr/lib/policykit-1/po
+root      1277  0.0  0.1  12844  1820 ttyS0    Ss+  03:57   0:00 /sbin/agetty --keep-bau
+root      1279  0.0  0.1  14660  1748 tty1     Ss+  03:57   0:00 /sbin/agetty --noclear 
+root      1322  0.0  0.5  65520  5488 ?        Ss   03:57   0:00 /usr/sbin/sshd -D
+root      1369  0.0  0.0      0     0 ?        S    04:13   0:00 [kworker/0:0]
+root      1392  0.0  0.6  95368  6880 ?        Ss   04:21   0:00 sshd: ubuntu [priv]
+ubuntu    1394  0.0  0.4  45248  4692 ?        Ss   04:22   0:00 /lib/systemd/systemd --
+root      1396  0.0  0.0      0     0 ?        S    04:22   0:00 [kworker/0:1]
+ubuntu    1397  0.0  0.2  61408  2128 ?        S    04:22   0:00 (sd-pam)
+root      1402  0.0  0.0      0     0 ?        S    04:22   0:00 [kworker/0:2]
+ubuntu    1450  0.0  0.3  95368  3316 ?        S    04:22   0:00 sshd: ubuntu@pts/0
+ubuntu    1453  0.0  0.5  21396  5196 pts/0    Ss   04:22   0:00 -bash
+ubuntu    1478  0.0  0.3  36084  3336 pts/0    R+   04:23   0:00 ps -aux
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs  490M     0  490M   0% /dev
+tmpfs          tmpfs     100M  4.3M   95M   5% /run
+/dev/xvda1     ext4      7.8G  916M  6.5G  13% /
+tmpfs          tmpfs     496M     0  496M   0% /dev/shm
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock
+tmpfs          tmpfs     496M     0  496M   0% /sys/fs/cgroup
+tmpfs          tmpfs     100M     0  100M   0% /run/user/1000
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+syslog:x:104:108::/home/syslog:/bin/false
+_apt:x:105:65534::/nonexistent:/bin/false
+lxd:x:106:65534::/var/lib/lxd/:/bin/false
+messagebus:x:107:111::/var/run/dbus:/bin/false
+uuidd:x:108:112::/run/uuidd:/bin/false
+dnsmasq:x:109:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+sshd:x:110:65534::/var/run/sshd:/usr/sbin/nologin
+pollinate:x:111:1::/var/cache/pollinate:/bin/false
+ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ wget http://www.cs.wright.edu/~pmateti/Courses/3900/Lectures/ Cloud/worms12.cpp
+--2017-01-27 04:24:20--  http://www.cs.wright.edu/~pmateti/Courses/3900/Lectures/Cloud/worms12.cpp
+Resolving www.cs.wright.edu (www.cs.wright.edu)... 130.108.74.59
+Connecting to www.cs.wright.edu (www.cs.wright.edu)|130.108.74.59|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://cecs.wright.edu/~pmateti/Courses/3900/Lectures/Cloud/worms12.cpp [following]
+--2017-01-27 04:24:21--  http://cecs.wright.edu/~pmateti/Courses/3900/Lectures/Cloud/worms12.cpp
+Resolving cecs.wright.edu (cecs.wright.edu)... 130.108.74.79
+Connecting to cecs.wright.edu (cecs.wright.edu)|130.108.74.79|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 13933 (14K) [text/x-c]
+Saving to: ‘worms12.cpp’
+
+worms12.cpp             0%[                          ]       0  --.-KB/s               worms12.cpp           100%[=========================>]  13.61K  --.-KB/s    in 0.1s    
+
+2017-01-27 04:24:21 (99.9 KB/s) - ‘worms12.cpp’ saved [13933/13933]
+
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ dpkgv[K -l
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name             Version       Architecture  Description
++++-================-=============-=============-=====================================
+ii  accountsservice  0.6.40-2ubunt amd64         query and manipulate user account inf
+ii  acl              2.2.52-3      amd64         Access control list utilities
+ii  acpid            1:2.0.26-1ubu amd64         Advanced Configuration and Power Inte
+ii  adduser          3.113+nmu3ubu all           add and remove users and groups
+ii  apparmor         2.10.95-0ubun amd64         user-space parser utility for AppArmo
+ii  apport           2.20.1-0ubunt all           automatically generate crash reports 
+ii  apport-symptoms  0.20          all           symptom scripts for apport
+ii  apt              1.2.15ubuntu0 amd64         commandline package manager
+ii  apt-transport-ht 1.2.15ubuntu0 amd64         https download transport for APT
+ii  apt-utils        1.2.15ubuntu0 amd64         package management related utility pr
+ii  at               3.1.18-2ubunt amd64         Delayed job execution and batch proce
+ii  base-files       9.4ubuntu4.3  amd64         Debian base system miscellaneous file
+ii  base-passwd      3.5.39        amd64         Debian base system master password an
+ii  bash             4.3-14ubuntu1 amd64         GNU Bourne Again SHell
+ii  bash-completion  1:2.1-4.2ubun all           programmable completion for the bash 
+ii  bcache-tools     1.0.8-2       amd64         bcache userspace tools
+ii  bind9-host       1:9.10.3.dfsg amd64         Version of 'host' bundled with BIND 9
+ii  bsdmainutils     9.0.6ubuntu3  amd64         collection of more utilities from Fre
+ii  bsdutils         1:2.27.1-6ubu amd64         basic utilities from 4.4BSD-Lite
+ii  btrfs-tools      4.4-1         amd64         Checksumming Copy on Write Filesystem
+ii  busybox-initramf 1:1.22.0-15ub amd64         Standalone shell setup for initramfs
+ii  busybox-static   1:1.22.0-15ub amd64         Standalone rescue shell with tons of 
+ii  byobu            5.106-0ubuntu all           text window manager, shell multiplexe
+ii  bzip2            1.0.6-8       amd64         high-quality block-sorting file compr
+ii  ca-certificates  20160104ubunt all           Common CA certificates
+ii  cloud-guest-util 0.27-0ubuntu2 all           cloud guest utilities
+ii  cloud-init       0.7.8-49-g9e9 all           Init scripts for cloud instances
+ii  cloud-initramfs- 0.27ubuntu1.2 all           copy initramfs modules into root file
+ii  cloud-initramfs- 0.27ubuntu1.2 all           write a network interface file in /ru
+ii  command-not-foun 0.3ubuntu16.0 all           Suggest installation of packages in i
+ii  command-not-foun 0.3ubuntu16.0 amd64         Set of data files for command-not-fou
+ii  console-setup    1.108ubuntu15 all           console font and keymap setup program
+ii  console-setup-li 1.108ubuntu15 all           Linux specific part of console-setup
+ii  coreutils        8.25-2ubuntu2 amd64         GNU core utilities
+ii  cpio             2.11+dfsg-5ub amd64         GNU cpio -- a program to manage archi
+ii  cron             3.0pl1-128ubu amd64         process scheduling daemon
+ii  cryptsetup       2:1.6.6-5ubun amd64         disk encryption support - startup scr
+ii  cryptsetup-bin   2:1.6.6-5ubun amd64         disk encryption support - command lin
+ii  curl             7.47.0-1ubunt amd64         command line tool for transferring da
+ii  dash             0.5.8-2.1ubun amd64         POSIX-compliant shell
+ii  dbus             1.10.6-1ubunt amd64         simple interprocess messaging system 
+ii  debconf          1.5.58ubuntu1 all           Debian configuration management syste
+ii  debconf-i18n     1.5.58ubuntu1 all           full internationalization support for
+ii  debianutils      4.7           amd64         Miscellaneous utilities specific to D
+ii  dh-python        2.20151103ubu all           Debian helper tools for packaging Pyt
+ii  diffutils        1:3.3-3       amd64         File comparison utilities
+ii  distro-info-data 0.28ubuntu0.2 all           information about the distributions' 
+ii  dmeventd         2:1.02.110-1u amd64         Linux Kernel Device Mapper event daem
+ii  dmidecode        3.0-2ubuntu0. amd64         SMBIOS/DMI table decoder
+ii  dmsetup          2:1.02.110-1u amd64         Linux Kernel Device Mapper userspace 
+ii  dns-root-data    2015052300+h+ all           DNS root data including root zone and
+ii  dnsmasq-base     2.75-1ubuntu0 amd64         Small caching DNS proxy and DHCP/TFTP
+ii  dnsutils         1:9.10.3.dfsg amd64         Clients provided with BIND
+ii  dosfstools       3.0.28-2ubunt amd64         utilities for making and checking MS-
+ii  dpkg             1.18.4ubuntu1 amd64         Debian package management system
+ii  e2fslibs:amd64   1.42.13-1ubun amd64         ext2/ext3/ext4 file system libraries
+ii  e2fsprogs        1.42.13-1ubun amd64         ext2/ext3/ext4 file system utilities
+ii  eatmydata        105-3         all           Library and utilities designed to dis
+ii  ed               1.10-2        amd64         classic UNIX line editor
+ii  eject            2.1.5+deb1+cv amd64         ejects CDs and operates CD-Changers u
+ii  ethtool          1:4.5-1       amd64         display or change Ethernet device set
+ii  file             1:5.25-2ubunt amd64         Determines file type using "magic" nu
+ii  findutils        4.6.0+git+201 amd64         utilities for finding files--find, xa
+ii  fonts-ubuntu-fon 1:0.83-0ubunt all           Ubuntu Font Family Linux console font
+ii  friendly-recover 0.2.31        all           Make recovery more user-friendly
+ii  ftp              0.17-33       amd64         classical file transfer client
+ii  fuse             2.9.4-1ubuntu amd64         Filesystem in Userspace
+ii  gawk             1:4.1.3+dfsg- amd64         GNU awk, a pattern scanning and proce
+ii  gcc-5-base:amd64 5.4.0-6ubuntu amd64         GCC, the GNU Compiler Collection (bas
+ii  gcc-6-base:amd64 6.0.1-0ubuntu amd64         GCC, the GNU Compiler Collection (bas
+ii  gdisk            1.0.1-1build1 amd64         GPT fdisk text-mode partitioning tool
+ii  geoip-database   20160408-1    all           IP lookup command line tools that use
+ii  gettext-base     0.19.7-2ubunt amd64         GNU Internationalization utilities fo
+ii  gir1.2-glib-2.0: 1.46.0-3ubunt amd64         Introspection data for GLib, GObject,
+ii  git              1:2.7.4-0ubun amd64         fast, scalable, distributed revision 
+ii  git-man          1:2.7.4-0ubun all           fast, scalable, distributed revision 
+ii  gnupg            1.4.20-1ubunt amd64         GNU privacy guard - a free PGP replac
+ii  gpgv             1.4.20-1ubunt amd64         GNU privacy guard - signature verific
+ii  grep             2.25-1~16.04. amd64         GNU grep, egrep and fgrep
+ii  groff-base       1.22.3-7      amd64         GNU troff text-formatting system (bas
+ii  grub-common      2.02~beta2-36 amd64         GRand Unified Bootloader (common file
+ii  grub-gfxpayload- 0.7           amd64         GRUB gfxpayload blacklist
+ii  grub-legacy-ec2  0.7.8-49-g9e9 all           Handles update-grub for ec2 instances
+ii  grub-pc          2.02~beta2-36 amd64         GRand Unified Bootloader, version 2 (
+ii  grub-pc-bin      2.02~beta2-36 amd64         GRand Unified Bootloader, version 2 (
+ii  grub2-common     2.02~beta2-36 amd64         GRand Unified Bootloader (common file
+ii  gzip             1.6-4ubuntu1  amd64         GNU compression utilities
+ii  hdparm           9.48+ds-1     amd64         tune hard disk parameters for high pe
+ii  hostname         3.16ubuntu2   amd64         utility to set/show the host name or 
+ii  ifenslave        2.7ubuntu1    all           configure network interfaces for para
+ii  ifupdown         0.8.10ubuntu1 amd64         high level tools to configure network
+ii  info             6.1.0.dfsg.1- amd64         Standalone GNU Info documentation bro
+ii  init             1.29ubuntu3   amd64         System-V-like init utilities - metapa
+ii  init-system-help 1.29ubuntu3   all           helper tools for all init systems
+ii  initramfs-tools  0.122ubuntu8. all           generic modular initramfs generator (
+ii  initramfs-tools- 0.122ubuntu8. amd64         binaries used by initramfs-tools
+ii  initramfs-tools- 0.122ubuntu8. all           generic modular initramfs generator (
+ii  initscripts      2.88dsf-59.3u amd64         scripts for initializing and shutting
+ii  insserv          1.14.0-5ubunt amd64         boot sequence organizer using LSB ini
+ii  install-info     6.1.0.dfsg.1- amd64         Manage installed documentation in inf
+ii  iproute2         4.3.0-1ubuntu amd64         networking and traffic control tools
+ii  iptables         1.6.0-2ubuntu amd64         administration tools for packet filte
+ii  iputils-ping     3:20121221-5u amd64         Tools to test the reachability of net
+ii  iputils-tracepat 3:20121221-5u amd64         Tools to trace the network path to a 
+ii  irqbalance       1.1.0-2ubuntu amd64         Daemon to balance interrupts for SMP 
+ii  isc-dhcp-client  4.3.3-5ubuntu amd64         DHCP client for automatically obtaini
+ii  isc-dhcp-common  4.3.3-5ubuntu amd64         common files used by all of the isc-d
+ii  iso-codes        3.65-1        all           ISO language, territory, currency, sc
+ii  kbd              1.15.5-1ubunt amd64         Linux console font and keytable utili
+ii  keyboard-configu 1.108ubuntu15 all           system-wide keyboard preferences
+ii  klibc-utils      2.0.4-8ubuntu amd64         small utilities built with klibc for 
+ii  kmod             22-1ubuntu4   amd64         tools for managing Linux kernel modul
+ii  krb5-locales     1.13.2+dfsg-5 all           Internationalization support for MIT 
+ii  language-selecto 0.165.4       all           Language selector for Ubuntu
+ii  less             481-2.1ubuntu amd64         pager program similar to more
+ii  libaccountsservi 0.6.40-2ubunt amd64         query and manipulate user account inf
+ii  libacl1:amd64    2.2.52-3      amd64         Access control list shared library
+ii  libapparmor-perl 2.10.95-0ubun amd64         AppArmor library Perl bindings
+ii  libapparmor1:amd 2.10.95-0ubun amd64         changehat AppArmor library
+ii  libapt-inst2.0:a 1.2.15ubuntu0 amd64         deb package format runtime library
+ii  libapt-pkg5.0:am 1.2.15ubuntu0 amd64         package management runtime library
+ii  libasn1-8-heimda 1.7~git201509 amd64         Heimdal Kerberos - ASN.1 library
+ii  libasprintf0v5:a 0.19.7-2ubunt amd64         GNU library to use fprintf and friend
+ii  libatm1:amd64    1:2.5.1-1.5   amd64         shared library for ATM (Asynchronous 
+ii  libattr1:amd64   1:2.4.47-2    amd64         Extended attribute shared library
+ii  libaudit-common  1:2.4.5-1ubun all           Dynamic library for security auditing
+ii  libaudit1:amd64  1:2.4.5-1ubun amd64         Dynamic library for security auditing
+ii  libbind9-140:amd 1:9.10.3.dfsg amd64         BIND9 Shared Library used by BIND
+ii  libblkid1:amd64  2.27.1-6ubunt amd64         block device ID library
+ii  libbsd0:amd64    0.8.2-1       amd64         utility functions from BSD systems - 
+ii  libbz2-1.0:amd64 1.0.6-8       amd64         high-quality block-sorting file compr
+ii  libc-bin         2.23-0ubuntu5 amd64         GNU C Library: Binaries
+ii  libc6:amd64      2.23-0ubuntu5 amd64         GNU C Library: Shared libraries
+ii  libcap-ng0:amd64 0.7.7-1       amd64         An alternate POSIX capabilities libra
+ii  libcap2:amd64    1:2.24-12     amd64         POSIX 1003.1e capabilities (library)
+ii  libcap2-bin      1:2.24-12     amd64         POSIX 1003.1e capabilities (utilities
+ii  libcomerr2:amd64 1.42.13-1ubun amd64         common error description library
+ii  libcryptsetup4:a 2:1.6.6-5ubun amd64         disk encryption support - shared libr
+ii  libcurl3-gnutls: 7.47.0-1ubunt amd64         easy-to-use client-side URL transfer 
+ii  libdb5.3:amd64   5.3.28-11     amd64         Berkeley v5.3 Database Libraries [run
+ii  libdbus-1-3:amd6 1.10.6-1ubunt amd64         simple interprocess messaging system 
+ii  libdbus-glib-1-2 0.106-1       amd64         simple interprocess messaging system 
+ii  libdebconfclient 0.198ubuntu1  amd64         Debian Configuration Management Syste
+ii  libdevmapper-eve 2:1.02.110-1u amd64         Linux Kernel Device Mapper event supp
+ii  libdevmapper1.02 2:1.02.110-1u amd64         Linux Kernel Device Mapper userspace 
+ii  libdns-export162 1:9.10.3.dfsg amd64         Exported DNS Shared Library
+ii  libdns162:amd64  1:9.10.3.dfsg amd64         DNS Shared Library used by BIND
+ii  libdrm2:amd64    2.4.67-1ubunt amd64         Userspace interface to kernel DRM ser
+ii  libdumbnet1:amd6 1.12-7        amd64         dumb, portable networking library -- 
+ii  libeatmydata1:am 105-3         amd64         Library and utilities to disable fsyn
+ii  libedit2:amd64   3.1-20150325- amd64         BSD editline and history libraries
+ii  libelf1:amd64    0.165-3ubuntu amd64         library to read and write ELF files
+ii  liberror-perl    0.17-1.2      all           Perl module for error/exception handl
+ii  libestr0         0.1.10-1      amd64         Helper functions for handling strings
+ii  libevent-2.0-5:a 2.0.21-stable amd64         Asynchronous event notification libra
+ii  libexpat1:amd64  2.1.0-7ubuntu amd64         XML parsing C library - runtime libra
+ii  libfdisk1:amd64  2.27.1-6ubunt amd64         fdisk partitioning library
+ii  libffi6:amd64    3.2.1-4       amd64         Foreign Function Interface library ru
+ii  libfreetype6:amd 2.6.1-0.1ubun amd64         FreeType 2 font engine, shared librar
+ii  libfribidi0:amd6 0.19.7-1      amd64         Free Implementation of the Unicode Bi
+ii  libfuse2:amd64   2.9.4-1ubuntu amd64         Filesystem in Userspace (library)
+ii  libgcc1:amd64    1:6.0.1-0ubun amd64         GCC support library
+ii  libgcrypt20:amd6 1.6.5-2ubuntu amd64         LGPL Crypto library - runtime library
+ii  libgdbm3:amd64   1.8.3-13.1    amd64         GNU dbm database routines (runtime ve
+ii  libgeoip1:amd64  1.6.9-1       amd64         non-DNS IP-to-country resolver librar
+ii  libgirepository- 1.46.0-3ubunt amd64         Library for handling GObject introspe
+ii  libglib2.0-0:amd 2.48.1-1~ubun amd64         GLib library of C routines
+ii  libglib2.0-data  2.48.1-1~ubun all           Common files for GLib library
+ii  libgmp10:amd64   2:6.1.0+dfsg- amd64         Multiprecision arithmetic library
+ii  libgnutls-openss 3.4.10-4ubunt amd64         GNU TLS library - OpenSSL wrapper
+ii  libgnutls30:amd6 3.4.10-4ubunt amd64         GNU TLS library - main runtime librar
+ii  libgpg-error0:am 1.21-2ubuntu1 amd64         library for common error values and m
+ii  libgpm2:amd64    1.20.4-6.1    amd64         General Purpose Mouse - shared librar
+ii  libgssapi-krb5-2 1.13.2+dfsg-5 amd64         MIT Kerberos runtime libraries - krb5
+ii  libgssapi3-heimd 1.7~git201509 amd64         Heimdal Kerberos - GSSAPI support lib
+ii  libhcrypto4-heim 1.7~git201509 amd64         Heimdal Kerberos - crypto library
+ii  libheimbase1-hei 1.7~git201509 amd64         Heimdal Kerberos - Base library
+ii  libheimntlm0-hei 1.7~git201509 amd64         Heimdal Kerberos - NTLM support libra
+ii  libhogweed4:amd6 3.2-1         amd64         low level cryptographic library (publ
+ii  libhx509-5-heimd 1.7~git201509 amd64         Heimdal Kerberos - X509 support libra
+ii  libicu55:amd64   55.1-7        amd64         International Components for Unicode
+ii  libidn11:amd64   1.32-3ubuntu1 amd64         GNU Libidn library, implementation of
+ii  libisc-export160 1:9.10.3.dfsg amd64         Exported ISC Shared Library
+ii  libisc160:amd64  1:9.10.3.dfsg amd64         ISC Shared Library used by BIND
+ii  libisccc140:amd6 1:9.10.3.dfsg amd64         Command Channel Library used by BIND
+ii  libisccfg140:amd 1:9.10.3.dfsg amd64         Config File Handling Library used by 
+ii  libjson-c2:amd64 0.11-4ubuntu2 amd64         JSON manipulation library - shared li
+ii  libk5crypto3:amd 1.13.2+dfsg-5 amd64         MIT Kerberos runtime libraries - Cryp
+ii  libkeyutils1:amd 1.5.9-8ubuntu amd64         Linux Key Management Utilities (libra
+ii  libklibc         2.0.4-8ubuntu amd64         minimal libc subset for use with init
+ii  libkmod2:amd64   22-1ubuntu4   amd64         libkmod shared library
+ii  libkrb5-26-heimd 1.7~git201509 amd64         Heimdal Kerberos - libraries
+ii  libkrb5-3:amd64  1.13.2+dfsg-5 amd64         MIT Kerberos runtime libraries
+ii  libkrb5support0: 1.13.2+dfsg-5 amd64         MIT Kerberos runtime libraries - Supp
+ii  libldap-2.4-2:am 2.4.42+dfsg-2 amd64         OpenLDAP libraries
+ii  liblocale-gettex 1.07-1build1  amd64         module using libc functions for inter
+ii  liblvm2app2.2:am 2.02.133-1ubu amd64         LVM2 application library
+ii  liblvm2cmd2.02:a 2.02.133-1ubu amd64         LVM2 command library
+ii  liblwres141:amd6 1:9.10.3.dfsg amd64         Lightweight Resolver Library used by 
+ii  liblxc1          2.0.5-0ubuntu amd64         Linux Containers userspace tools (lib
+ii  liblz4-1:amd64   0.0~r131-2ubu amd64         Fast LZ compression algorithm library
+ii  liblzma5:amd64   5.1.1alpha+20 amd64         XZ-format compression library
+ii  liblzo2-2:amd64  2.08-1.2      amd64         data compression library
+ii  libmagic1:amd64  1:5.25-2ubunt amd64         File type determination library using
+ii  libmnl0:amd64    1.0.3-5       amd64         minimalistic Netlink communication li
+ii  libmount1:amd64  2.27.1-6ubunt amd64         device mounting library
+ii  libmpdec2:amd64  2.4.2-1       amd64         library for decimal floating point ar
+ii  libmpfr4:amd64   3.1.4-1       amd64         multiple precision floating-point com
+ii  libmspack0:amd64 0.5-1         amd64         library for Microsoft compression for
+ii  libncurses5:amd6 6.0+20160213- amd64         shared libraries for terminal handlin
+ii  libncursesw5:amd 6.0+20160213- amd64         shared libraries for terminal handlin
+ii  libnetfilter-con 1.0.5-1       amd64         Netfilter netlink-conntrack library
+ii  libnettle6:amd64 3.2-1         amd64         low level cryptographic library (symm
+ii  libnewt0.52:amd6 0.52.18-1ubun amd64         Not Erik's Windowing Toolkit - text m
+ii  libnfnetlink0:am 1.0.1-3       amd64         Netfilter netlink library
+ii  libnih1:amd64    1.0.3-4.3ubun amd64         NIH Utility Library
+ii  libnuma1:amd64   2.0.11-1ubunt amd64         Libraries for controlling NUMA policy
+ii  libp11-kit0:amd6 0.23.2-5~ubun amd64         library for loading and coordinating 
+ii  libpam-modules:a 1.1.8-3.2ubun amd64         Pluggable Authentication Modules for 
+ii  libpam-modules-b 1.1.8-3.2ubun amd64         Pluggable Authentication Modules for 
+ii  libpam-runtime   1.1.8-3.2ubun all           Runtime support for the PAM library
+ii  libpam-systemd:a 229-4ubuntu12 amd64         system and service manager - PAM modu
+ii  libpam0g:amd64   1.1.8-3.2ubun amd64         Pluggable Authentication Modules libr
+ii  libparted2:amd64 3.2-15        amd64         disk partition manipulator - shared l
+ii  libpcap0.8:amd64 1.7.4-2       amd64         system interface for user-level packe
+ii  libpci3:amd64    1:3.3.1-1.1ub amd64         Linux PCI Utilities (shared library)
+ii  libpcre3:amd64   2:8.38-3.1    amd64         Perl 5 Compatible Regular Expression 
+ii  libperl5.22:amd6 5.22.1-9      amd64         shared Perl library
+ii  libpipeline1:amd 1.4.1-2       amd64         pipeline manipulation library
+ii  libplymouth4:amd 0.9.2-3ubuntu amd64         graphical boot animation and logger -
+ii  libpng12-0:amd64 1.2.54-1ubunt amd64         PNG library - runtime
+ii  libpolkit-agent- 0.105-14.1    amd64         PolicyKit Authentication Agent API
+ii  libpolkit-backen 0.105-14.1    amd64         PolicyKit backend API
+ii  libpolkit-gobjec 0.105-14.1    amd64         PolicyKit Authorization API
+ii  libpopt0:amd64   1.16-10       amd64         lib for parsing cmdline parameters
+ii  libprocps4:amd64 2:3.3.10-4ubu amd64         library for accessing process informa
+ii  libpython3-stdli 3.5.1-3       amd64         interactive high-level object-oriente
+ii  libpython3.5:amd 3.5.2-2ubuntu amd64         Shared Python runtime library (versio
+ii  libpython3.5-min 3.5.2-2ubuntu amd64         Minimal subset of the Python language
+ii  libpython3.5-std 3.5.2-2ubuntu amd64         Interactive high-level object-oriente
+ii  libreadline5:amd 5.2+dfsg-3bui amd64         GNU readline and history libraries, r
+ii  libreadline6:amd 6.3-8ubuntu2  amd64         GNU readline and history libraries, r
+ii  libroken18-heimd 1.7~git201509 amd64         Heimdal Kerberos - roken support libr
+ii  librtmp1:amd64   2.4+20151223. amd64         toolkit for RTMP streams (shared libr
+ii  libsasl2-2:amd64 2.1.26.dfsg1- amd64         Cyrus SASL - authentication abstracti
+ii  libsasl2-modules 2.1.26.dfsg1- amd64         Cyrus SASL - pluggable authentication
+ii  libsasl2-modules 2.1.26.dfsg1- amd64         Cyrus SASL - pluggable authentication
+ii  libseccomp2:amd6 2.2.3-3ubuntu amd64         high level interface to Linux seccomp
+ii  libselinux1:amd6 2.4-3build2   amd64         SELinux runtime shared libraries
+ii  libsemanage-comm 2.3-1build3   all           Common files for SELinux policy manag
+ii  libsemanage1:amd 2.3-1build3   amd64         SELinux policy management library
+ii  libsepol1:amd64  2.4-2         amd64         SELinux library for manipulating bina
+ii  libsigsegv2:amd6 2.10-4        amd64         Library for handling page faults in a
+ii  libslang2:amd64  2.3.0-2ubuntu amd64         S-Lang programming library - runtime 
+ii  libsmartcols1:am 2.27.1-6ubunt amd64         smart column output alignment library
+ii  libsqlite3-0:amd 3.11.0-1ubunt amd64         SQLite 3 shared library
+ii  libss2:amd64     1.42.13-1ubun amd64         command-line interface parsing librar
+ii  libssl1.0.0:amd6 1.0.2g-1ubunt amd64         Secure Sockets Layer toolkit - shared
+ii  libstdc++6:amd64 5.4.0-6ubuntu amd64         GNU Standard C++ Library v3
+ii  libsystemd0:amd6 229-4ubuntu12 amd64         systemd utility library
+ii  libtasn1-6:amd64 4.7-3ubuntu0. amd64         Manage ASN.1 structures (runtime)
+ii  libtext-charwidt 0.04-7build5  amd64         get display widths of characters on t
+ii  libtext-iconv-pe 1.7-5build4   amd64         converts between character sets in Pe
+ii  libtext-wrapi18n 0.06-7.1      all           internationalized substitute of Text:
+ii  libtinfo5:amd64  6.0+20160213- amd64         shared low-level terminfo library for
+ii  libudev1:amd64   229-4ubuntu12 amd64         libudev shared library
+ii  libusb-0.1-4:amd 2:0.1.12-28   amd64         userspace USB programming library
+ii  libusb-1.0-0:amd 2:1.0.20-1    amd64         userspace USB programming library
+ii  libustr-1.0-1:am 1.0.4-5       amd64         Micro string library: shared library
+ii  libutempter0:amd 1.1.6-3       amd64         privileged helper for utmp/wtmp updat
+ii  libuuid1:amd64   2.27.1-6ubunt amd64         Universally Unique ID library
+ii  libwind0-heimdal 1.7~git201509 amd64         Heimdal Kerberos - stringprep impleme
+ii  libwrap0:amd64   7.6.q-25      amd64         Wietse Venema's TCP wrappers library
+ii  libx11-6:amd64   2:1.6.3-1ubun amd64         X11 client-side library
+ii  libx11-data      2:1.6.3-1ubun all           X11 client-side library
+ii  libxau6:amd64    1:1.0.8-1     amd64         X11 authorisation library
+ii  libxcb1:amd64    1.11.1-1ubunt amd64         X C Binding
+ii  libxdmcp6:amd64  1:1.1.2-1.1   amd64         X11 Display Manager Control Protocol 
+ii  libxext6:amd64   2:1.3.3-1     amd64         X11 miscellaneous extension library
+ii  libxml2:amd64    2.9.3+dfsg1-1 amd64         GNOME XML library
+ii  libxmuu1:amd64   2:1.1.2-2     amd64         X11 miscellaneous micro-utility libra
+ii  libxtables11:amd 1.6.0-2ubuntu amd64         netfilter xtables library
+ii  libyaml-0-2:amd6 0.1.6-3       amd64         Fast YAML 1.1 parser and emitter libr
+ii  linux-base       4.0ubuntu1    all           Linux image base package
+ii  linux-headers-4. 4.4.0-53.74   all           Header files related to Linux kernel 
+ii  linux-headers-4. 4.4.0-53.74   amd64         Linux kernel headers for version 4.4.
+ii  linux-headers-ge 4.4.0.53.56   amd64         Generic Linux kernel headers
+ii  linux-headers-vi 4.4.0.53.56   amd64         Transitional package.
+ii  linux-image-4.4. 4.4.0-53.74   amd64         Linux kernel image for version 4.4.0 
+ii  linux-image-virt 4.4.0.53.56   amd64         This package will always depend on th
+ii  linux-virtual    4.4.0.53.56   amd64         Minimal Generic Linux kernel and head
+ii  locales          2.23-0ubuntu5 all           GNU C Library: National Language (loc
+ii  login            1:4.2-3.1ubun amd64         system login tools
+ii  logrotate        3.8.7-2ubuntu amd64         Log rotation utility
+ii  lsb-base         9.20160110ubu all           Linux Standard Base init script funct
+ii  lsb-release      9.20160110ubu all           Linux Standard Base version reporting
+ii  lshw             02.17-1.1ubun amd64         information about hardware configurat
+ii  lsof             4.89+dfsg-0.1 amd64         Utility to list open files
+ii  ltrace           0.7.3-5.1ubun amd64         Tracks runtime library calls in dynam
+ii  lvm2             2.02.133-1ubu amd64         Linux Logical Volume Manager
+ii  lxc-common       2.0.5-0ubuntu amd64         Linux Containers userspace tools (com
+ii  lxcfs            2.0.4-0ubuntu amd64         FUSE based filesystem for LXC
+ii  lxd              2.0.8-0ubuntu amd64         Container hypervisor based on LXC - d
+ii  lxd-client       2.0.8-0ubuntu amd64         Container hypervisor based on LXC - c
+ii  makedev          2.3.1-93ubunt all           creates device files in /dev
+ii  man-db           2.7.5-1       amd64         on-line manual pager
+ii  manpages         4.04-2        all           Manual pages about using a GNU/Linux 
+ii  mawk             1.3.3-17ubunt amd64         a pattern scanning and text processin
+ii  mdadm            3.3-2ubuntu7. amd64         tool to administer Linux MD arrays (s
+ii  mime-support     3.59ubuntu1   all           MIME files 'mime.types' & 'mailcap', 
+ii  mlocate          0.26-1ubuntu2 amd64         quickly find files on the filesystem 
+ii  mount            2.27.1-6ubunt amd64         tools for mounting and manipulating f
+ii  mtr-tiny         0.86-1ubuntu0 amd64         Full screen ncurses traceroute tool
+ii  multiarch-suppor 2.23-0ubuntu5 amd64         Transitional package to ensure multia
+ii  nano             2.5.3-2       amd64         small, friendly text editor inspired 
+ii  ncurses-base     6.0+20160213- all           basic terminal type definitions
+ii  ncurses-bin      6.0+20160213- amd64         terminal-related programs and man pag
+ii  ncurses-term     6.0+20160213- all           additional terminal type definitions
+ii  net-tools        1.60-26ubuntu amd64         NET-3 networking toolkit
+ii  netbase          5.3           all           Basic TCP/IP networking system
+ii  netcat-openbsd   1.105-7ubuntu amd64         TCP/IP swiss army knife
+ii  ntfs-3g          1:2015.3.14AR amd64         read/write NTFS driver for FUSE
+ii  open-iscsi       2.0.873+git0. amd64         iSCSI initiator tools
+ii  open-vm-tools    2:10.0.7-3227 amd64         Open VMware Tools for virtual machine
+ii  openssh-client   1:7.2p2-4ubun amd64         secure shell (SSH) client, for secure
+ii  openssh-server   1:7.2p2-4ubun amd64         secure shell (SSH) server, for secure
+ii  openssh-sftp-ser 1:7.2p2-4ubun amd64         secure shell (SSH) sftp server module
+ii  openssl          1.0.2g-1ubunt amd64         Secure Sockets Layer toolkit - crypto
+ii  os-prober        1.70ubuntu3   amd64         utility to detect other OSes on a set
+ii  overlayroot      0.27ubuntu1.2 all           use an overlayfs on top of a read-onl
+ii  parted           3.2-15        amd64         disk partition manipulator
+ii  passwd           1:4.2-3.1ubun amd64         change and administer password and gr
+ii  pastebinit       1.5-1         all           command-line pastebin client
+ii  patch            2.7.5-1       amd64         Apply a diff file to an original
+ii  pciutils         1:3.3.1-1.1ub amd64         Linux PCI Utilities
+ii  perl             5.22.1-9      amd64         Larry Wall's Practical Extraction and
+ii  perl-base        5.22.1-9      amd64         minimal Perl system
+ii  perl-modules-5.2 5.22.1-9      all           Core Perl modules
+ii  plymouth         0.9.2-3ubuntu amd64         boot animation, logger and I/O multip
+ii  plymouth-theme-u 0.9.2-3ubuntu amd64         boot animation, logger and I/O multip
+ii  policykit-1      0.105-14.1    amd64         framework for managing administrative
+ii  pollinate        4.23-0ubuntu1 all           seed the pseudo random number generat
+ii  popularity-conte 1.64ubuntu2   all           Vote for your favourite packages auto
+ii  powermgmt-base   1.31+nmu1     all           Common utils and configs for power ma
+ii  procps           2:3.3.10-4ubu amd64         /proc file system utilities
+ii  psmisc           22.21-2.1buil amd64         utilities that use the proc file syst
+ii  python-apt-commo 1.1.0~beta1bu all           Python interface to libapt-pkg (local
+ii  python3          3.5.1-3       amd64         interactive high-level object-oriente
+ii  python3-apport   2.20.1-0ubunt all           Python 3 library for Apport crash rep
+ii  python3-apt      1.1.0~beta1bu amd64         Python 3 interface to libapt-pkg
+ii  python3-blinker  1.3.dfsg2-1bu all           fast, simple object-to-object and bro
+ii  python3-cffi-bac 1.5.2-1ubuntu amd64         Foreign Function Interface for Python
+ii  python3-chardet  2.3.0-2       all           universal character encoding detector
+ii  python3-commandn 0.3ubuntu16.0 all           Python 3 bindings for command-not-fou
+ii  python3-configob 5.0.6-2       all           simple but powerful config file reade
+ii  python3-cryptogr 1.2.3-1ubuntu amd64         Python library exposing cryptographic
+ii  python3-dbus     1.2.0-3       amd64         simple interprocess messaging system 
+ii  python3-debian   0.1.27ubuntu2 all           Python 3 modules to work with Debian-
+ii  python3-distupgr 1:16.04.19    all           manage release upgrades
+ii  python3-gdbm:amd 3.5.1-1       amd64         GNU dbm database support for Python 3
+ii  python3-gi       3.20.0-0ubunt amd64         Python 3 bindings for gobject-introsp
+ii  python3-idna     2.0-3         all           Python IDNA2008 (RFC 5891) handling (
+ii  python3-jinja2   2.8-1         all           small but fast and easy to use stand-
+ii  python3-json-poi 1.9-3         all           resolve JSON pointers - Python 3.x
+ii  python3-jsonpatc 1.19-3        all           library to apply JSON patches - Pytho
+ii  python3-jwt      1.3.0-1       all           Python 3 implementation of JSON Web T
+ii  python3-markupsa 0.23-2build2  amd64         HTML/XHTML/XML string library for Pyt
+ii  python3-minimal  3.5.1-3       amd64         minimal subset of the Python language
+ii  python3-newt     0.52.18-1ubun amd64         NEWT module for Python3
+ii  python3-oauthlib 1.0.3-1       all           generic, spec-compliant implementatio
+ii  python3-pkg-reso 20.7.0-1      all           Package Discovery and Resource Access
+ii  python3-prettyta 0.7.2-3       all           library to represent tabular data in 
+ii  python3-problem- 2.20.1-0ubunt all           Python 3 library to handle problem re
+ii  python3-pyasn1   0.1.9-1       all           ASN.1 library for Python (Python 3 mo
+ii  python3-pycurl   7.43.0-1ubunt amd64         Python bindings to libcurl (Python 3)
+ii  python3-requests 2.9.1-3       all           elegant and simple HTTP library for P
+ii  python3-serial   3.0.1-1       all           pyserial - module encapsulating acces
+ii  python3-six      1.10.0-3      all           Python 2 and 3 compatibility library 
+ii  python3-software 0.96.20.5     all           manage the repositories that you inst
+ii  python3-systemd  231-2build1   amd64         Python 3 bindings for systemd
+ii  python3-update-m 1:16.04.4     all           python 3.x module for update-manager
+ii  python3-urllib3  1.13.1-2ubunt all           HTTP library with thread-safe connect
+ii  python3-yaml     3.11-3build1  amd64         YAML parser and emitter for Python3
+ii  python3.5        3.5.2-2ubuntu amd64         Interactive high-level object-oriente
+ii  python3.5-minima 3.5.2-2ubuntu amd64         Minimal subset of the Python language
+ii  readline-common  6.3-8ubuntu2  all           GNU readline and history libraries, c
+ii  rename           0.20-4        all           Perl extension for renaming multiple 
+ii  resolvconf       1.78ubuntu2   all           name server information handler
+ii  rsync            3.1.1-3ubuntu amd64         fast, versatile, remote (and local) f
+ii  rsyslog          8.16.0-1ubunt amd64         reliable system and kernel logging da
+ii  run-one          1.17-0ubuntu1 all           run just one instance of a command an
+ii  screen           4.3.1-2build1 amd64         terminal multiplexer with VT100/ANSI 
+ii  sed              4.2.2-7       amd64         The GNU sed stream editor
+ii  sensible-utils   0.0.9         all           Utilities for sensible alternative se
+ii  sgml-base        1.26+nmu4ubun all           SGML infrastructure and SGML catalog 
+ii  shared-mime-info 1.5-2ubuntu0. amd64         FreeDesktop.org shared MIME database 
+ii  snap-confine     1.0.43-0ubunt amd64         Support executable to apply confineme
+ii  snapd            2.17.1ubuntu1 amd64         Tool to interact with Ubuntu Core Sna
+ii  software-propert 0.96.20.5     all           manage the repositories that you inst
+ii  sosreport        3.2+git276-g7 amd64         Set of tools to gather troubleshootin
+ii  squashfs-tools   1:4.3-3ubuntu amd64         Tool to create and append to squashfs
+ii  ssh-import-id    5.5-0ubuntu1  all           securely retrieve an SSH public key a
+ii  strace           4.11-1ubuntu3 amd64         System call tracer
+ii  sudo             1.8.16-0ubunt amd64         Provide limited super user privileges
+ii  systemd          229-4ubuntu12 amd64         system and service manager
+ii  systemd-sysv     229-4ubuntu12 amd64         system and service manager - SysV lin
+ii  sysv-rc          2.88dsf-59.3u all           System-V-like runlevel change mechani
+ii  sysvinit-utils   2.88dsf-59.3u amd64         System-V-like utilities
+ii  tar              1.28-2.1ubunt amd64         GNU version of the tar archiving util
+ii  tcpd             7.6.q-25      amd64         Wietse Venema's TCP wrapper utilities
+ii  tcpdump          4.7.4-1ubuntu amd64         command-line network traffic analyzer
+ii  telnet           0.17-40       amd64         basic telnet client
+ii  time             1.7-25.1      amd64         GNU time program for measuring CPU re
+ii  tmux             2.1-3build1   amd64         terminal multiplexer
+ii  tzdata           2016j-0ubuntu all           time zone and daylight-saving time da
+ii  ubuntu-cloudimag 2013.11.11    all           GnuPG keys of the Ubuntu Cloud Image 
+ii  ubuntu-core-laun 1.0.43-0ubunt amd64         Launcher for ubuntu-core (snappy) app
+ii  ubuntu-keyring   2012.05.19    all           GnuPG keys of the Ubuntu archive
+ii  ubuntu-minimal   1.361         amd64         Minimal core of Ubuntu
+ii  ubuntu-release-u 1:16.04.19    all           manage release upgrades
+ii  ubuntu-server    1.361         amd64         The Ubuntu Server system
+ii  ubuntu-standard  1.361         amd64         The Ubuntu standard system
+ii  ucf              3.0036        all           Update Configuration File(s): preserv
+ii  udev             229-4ubuntu12 amd64         /dev/ and hotplug management daemon
+ii  ufw              0.35-0ubuntu2 all           program for managing a Netfilter fire
+ii  uidmap           1:4.2-3.1ubun amd64         programs to help use subuids
+ii  unattended-upgra 0.90ubuntu0.2 all           automatic installation of security up
+ii  update-manager-c 1:16.04.4     all           manage release upgrades
+ii  update-notifier- 3.168.2       all           Files shared between update-notifier 
+ii  ureadahead       0.100.0-19    amd64         Read required files in advance
+ii  usbutils         1:007-4       amd64         Linux USB utilities
+ii  util-linux       2.27.1-6ubunt amd64         miscellaneous system utilities
+ii  uuid-runtime     2.27.1-6ubunt amd64         runtime components for the Universall
+ii  vim              2:7.4.1689-3u amd64         Vi IMproved - enhanced vi editor
+ii  vim-common       2:7.4.1689-3u amd64         Vi IMproved - Common files
+ii  vim-runtime      2:7.4.1689-3u all           Vi IMproved - Runtime files
+ii  vim-tiny         2:7.4.1689-3u amd64         Vi IMproved - enhanced vi editor - co
+ii  vlan             1.9-3.2ubuntu amd64         user mode programs to enable VLANs on
+ii  wget             1.17.1-1ubunt amd64         retrieves files from the web
+ii  whiptail         0.52.18-1ubun amd64         Displays user-friendly dialog boxes f
+ii  xauth            1:1.0.9-1ubun amd64         X authentication utility
+ii  xdg-user-dirs    0.15-2ubuntu6 amd64         tool to manage well known user direct
+ii  xfsprogs         4.3.0+nmu1ubu amd64         Utilities for managing the XFS filesy
+ii  xkb-data         2.16-1ubuntu1 all           X Keyboard Extension (XKB) configurat
+ii  xml-core         0.13+nmu2     all           XML infrastructure and XML catalog fi
+ii  xz-utils         5.1.1alpha+20 amd64         XZ-format compression utilities
+ii  zerofree         1.0.3-1       amd64         zero free blocks from ext2, ext3 and 
+ii  zlib1g:amd64     1:1.2.8.dfsg- amd64         compression library - runtime
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ ping 69.81.74.112[C[C[C[C[C-69.81.74.112n69.81.74.112 69.81.74.112569.81.74.112 69.81.74.112
+connect: Invalid argument
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ ping -n 5 69.81.74.112[1P[1@c
+PING 69.81.74.112 (69.81.74.112) 56(84) bytes of data.
+64 bytes from 69.81.74.112: icmp_seq=1 ttl=35 time=104 ms
+64 bytes from 69.81.74.112: icmp_seq=2 ttl=35 time=107 ms
+64 bytes from 69.81.74.112: icmp_seq=3 ttl=35 time=104 ms
+64 bytes from 69.81.74.112: icmp_seq=4 ttl=35 time=104 ms
+64 bytes from 69.81.74.112: icmp_seq=5 ttl=35 time=104 ms
+
+--- 69.81.74.112 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+rtt min/avg/max/mdev = 104.339/105.071/107.653/1.339 ms
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ emacs
+The program 'emacs' can be found in the following packages:
+ * emacs24
+ * emacs24-nox
+ * e3
+ * emacs24-lucid
+ * jove
+Try: sudo apt install <selected package>
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ xclock &
+[1] 1487
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ The program 'xclock' is currently not installed. You can install it by typing:
+sudo apt install x11-apps
+
+[1]+  Exit 127                xclock
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ echo $DISPLAY
+localhost:10.0
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ sudo apt install x11-apps
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 7%Reading state information... Done
+The following additional packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libice6 libsm6 libxaw7
+  libxcursor1 libxfixes3 libxft2 libxkbfile1 libxmu6 libxpm4 libxrender1 libxt6
+  x11-common xbitmaps
+Suggested packages:
+  mesa-utils
+The following NEW packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libice6 libsm6 libxaw7
+  libxcursor1 libxfixes3 libxft2 libxkbfile1 libxmu6 libxpm4 libxrender1 libxt6
+  x11-apps x11-common xbitmaps
+0 upgraded, 17 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2,515 kB of archives.
+After this operation, 8,614 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+[33m0% [Working][0m            Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 x11-common all 1:7.7+13ubuntu3 [22.4 kB]
+[33m0% [1 x11-common 0 B/22.4 kB 0%][0m[33m                                2% [Working][0m            Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libice6 amd64 2:1.0.9-1 [39.2 kB]
+[33m2% [2 libice6 0 B/39.2 kB 0%][0m[33m                             4% [Working][0m            Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libsm6 amd64 2:1.2.2-1 [15.8 kB]
+[33m4% [3 libsm6 0 B/15.8 kB 0%][0m[33m                            6% [Working][0m            Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxfixes3 amd64 1:5.0.1-2 [11.1 kB]
+[33m6% [4 libxfixes3 0 B/11.1 kB 0%][0m[33m                                8% [Working][0m            Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxrender1 amd64 1:0.9.9-0ubuntu1 [18.5 kB]
+[33m8% [5 libxrender1 0 B/18.5 kB 0%][0m[33m                                 9% [Working][0m            Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxcursor1 amd64 1:1.1.14-1 [22.8 kB]
+[33m9% [6 libxcursor1 0 B/22.8 kB 0%][0m[33m                                 11% [Working][0m             Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 fonts-dejavu-core all 2.35-1 [1,039 kB]
+[33m11% [7 fonts-dejavu-core 0 B/1,039 kB 0%][0m[33m                                         45% [Working][0m             Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 fontconfig-config all 2.11.94-0ubuntu1.1 [49.9 kB]
+[33m45% [8 fontconfig-config 0 B/49.9 kB 0%][0m[33m                                        48% [Working][0m             Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libfontconfig1 amd64 2.11.94-0ubuntu1.1 [131 kB]
+[33m48% [9 libfontconfig1 0 B/131 kB 0%][0m[33m                                    54% [Working][0m             Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxft2 amd64 2.3.2-1 [36.1 kB]
+[33m54% [10 libxft2 0 B/36.1 kB 0%][0m[33m                               56% [Working][0m             Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxpm4 amd64 1:3.5.11-1 [33.1 kB]
+[33m56% [11 libxpm4 0 B/33.1 kB 0%][0m[33m                               58% [Working][0m             Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxt6 amd64 1:1.1.5-0ubuntu1 [160 kB]
+[33m58% [12 libxt6 0 B/160 kB 0%][0m[33m                             64% [Working][0m             Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxmu6 amd64 2:1.1.2-2 [46.0 kB]
+[33m64% [13 libxmu6 0 B/46.0 kB 0%][0m[33m                               67% [Working][0m             Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxaw7 amd64 2:1.0.13-1 [173 kB]
+[33m67% [14 libxaw7 0 B/173 kB 0%][0m[33m                              74% [Working][0m             Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxkbfile1 amd64 1:1.0.9-0ubuntu1 [65.1 kB]
+[33m74% [15 libxkbfile1 0 B/65.1 kB 0%][0m[33m                                   77% [Working][0m             Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 x11-apps amd64 7.7+5+nmu1ubuntu1 [624 kB]
+[33m77% [16 x11-apps 0 B/624 kB 0%][0m[33m                               98% [Working][0m             Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 xbitmaps all 1.1.1-2 [28.1 kB]
+[33m98% [17 xbitmaps 0 B/28.1 kB 0%][0m[33m                                100% [Working][0m              Fetched 2,515 kB in 0s (5,779 kB/s)
+
+7[0;33r8[1ASelecting previously unselected package x11-common.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53712 files and directories currently installed.)
+Preparing to unpack .../x11-common_1%3a7.7+13ubuntu3_all.deb ...
+7[34;0f[42m[30mProgress: [  0%][49m[39m [..................................................................] 87[34;0f[42m[30mProgress: [  1%][49m[39m [#.................................................................] 8Unpacking x11-common (1:7.7+13ubuntu3) ...
+7[34;0f[42m[30mProgress: [  2%][49m[39m [##................................................................] 87[34;0f[42m[30mProgress: [  3%][49m[39m [###...............................................................] 8Selecting previously unselected package libice6:amd64.
+Preparing to unpack .../libice6_2%3a1.0.9-1_amd64.deb ...
+7[34;0f[42m[30mProgress: [  4%][49m[39m [####..............................................................] 8Unpacking libice6:amd64 (2:1.0.9-1) ...
+7[34;0f[42m[30mProgress: [  5%][49m[39m [####..............................................................] 87[34;0f[42m[30mProgress: [  6%][49m[39m [#####.............................................................] 8Selecting previously unselected package libsm6:amd64.
+Preparing to unpack .../libsm6_2%3a1.2.2-1_amd64.deb ...
+7[34;0f[42m[30mProgress: [  8%][49m[39m [######............................................................] 8Unpacking libsm6:amd64 (2:1.2.2-1) ...
+7[34;0f[42m[30mProgress: [  9%][49m[39m [#######...........................................................] 87[34;0f[42m[30mProgress: [ 10%][49m[39m [#######...........................................................] 8Selecting previously unselected package libxfixes3:amd64.
+Preparing to unpack .../libxfixes3_1%3a5.0.1-2_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 11%][49m[39m [########..........................................................] 8Unpacking libxfixes3:amd64 (1:5.0.1-2) ...
+7[34;0f[42m[30mProgress: [ 12%][49m[39m [#########.........................................................] 87[34;0f[42m[30mProgress: [ 13%][49m[39m [##########........................................................] 8Selecting previously unselected package libxrender1:amd64.
+Preparing to unpack .../libxrender1_1%3a0.9.9-0ubuntu1_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 15%][49m[39m [##########........................................................] 8Unpacking libxrender1:amd64 (1:0.9.9-0ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 16%][49m[39m [###########.......................................................] 87[34;0f[42m[30mProgress: [ 17%][49m[39m [############......................................................] 8Selecting previously unselected package libxcursor1:amd64.
+Preparing to unpack .../libxcursor1_1%3a1.1.14-1_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 18%][49m[39m [#############.....................................................] 8Unpacking libxcursor1:amd64 (1:1.1.14-1) ...
+7[34;0f[42m[30mProgress: [ 19%][49m[39m [##############....................................................] 87[34;0f[42m[30mProgress: [ 20%][49m[39m [##############....................................................] 8Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../fonts-dejavu-core_2.35-1_all.deb ...
+7[34;0f[42m[30mProgress: [ 22%][49m[39m [###############...................................................] 8Unpacking fonts-dejavu-core (2.35-1) ...
+7[34;0f[42m[30mProgress: [ 23%][49m[39m [################..................................................] 87[34;0f[42m[30mProgress: [ 24%][49m[39m [#################.................................................] 8Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../fontconfig-config_2.11.94-0ubuntu1.1_all.deb ...
+7[34;0f[42m[30mProgress: [ 25%][49m[39m [#################.................................................] 8Unpacking fontconfig-config (2.11.94-0ubuntu1.1) ...
+7[34;0f[42m[30mProgress: [ 26%][49m[39m [##################................................................] 87[34;0f[42m[30mProgress: [ 27%][49m[39m [###################...............................................] 8Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../libfontconfig1_2.11.94-0ubuntu1.1_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 29%][49m[39m [####################..............................................] 8Unpacking libfontconfig1:amd64 (2.11.94-0ubuntu1.1) ...
+7[34;0f[42m[30mProgress: [ 30%][49m[39m [####################..............................................] 87[34;0f[42m[30mProgress: [ 31%][49m[39m [#####################.............................................] 8Selecting previously unselected package libxft2:amd64.
+Preparing to unpack .../libxft2_2.3.2-1_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 32%][49m[39m [######################............................................] 8Unpacking libxft2:amd64 (2.3.2-1) ...
+7[34;0f[42m[30mProgress: [ 33%][49m[39m [#######################...........................................] 87[34;0f[42m[30mProgress: [ 34%][49m[39m [########################..........................................] 8Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../libxpm4_1%3a3.5.11-1_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 36%][49m[39m [########################..........................................] 8Unpacking libxpm4:amd64 (1:3.5.11-1) ...
+7[34;0f[42m[30mProgress: [ 37%][49m[39m [#########################.........................................] 87[34;0f[42m[30mProgress: [ 38%][49m[39m [##########################........................................] 8Selecting previously unselected package libxt6:amd64.
+Preparing to unpack .../libxt6_1%3a1.1.5-0ubuntu1_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 39%][49m[39m [###########################.......................................] 8Unpacking libxt6:amd64 (1:1.1.5-0ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 40%][49m[39m [###########################.......................................] 87[34;0f[42m[30mProgress: [ 41%][49m[39m [############################......................................] 8Selecting previously unselected package libxmu6:amd64.
+Preparing to unpack .../libxmu6_2%3a1.1.2-2_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 43%][49m[39m [#############################.....................................] 8Unpacking libxmu6:amd64 (2:1.1.2-2) ...
+7[34;0f[42m[30mProgress: [ 44%][49m[39m [##############################....................................] 87[34;0f[42m[30mProgress: [ 45%][49m[39m [##############################....................................] 8Selecting previously unselected package libxaw7:amd64.
+Preparing to unpack .../libxaw7_2%3a1.0.13-1_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 46%][49m[39m [###############################...................................] 8Unpacking libxaw7:amd64 (2:1.0.13-1) ...
+7[34;0f[42m[30mProgress: [ 47%][49m[39m [################################..................................] 87[34;0f[42m[30mProgress: [ 48%][49m[39m [#################################.................................] 8Selecting previously unselected package libxkbfile1:amd64.
+Preparing to unpack .../libxkbfile1_1%3a1.0.9-0ubuntu1_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 50%][49m[39m [#################################.................................] 8Unpacking libxkbfile1:amd64 (1:1.0.9-0ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 51%][49m[39m [##################################................................] 87[34;0f[42m[30mProgress: [ 52%][49m[39m [###################################...............................] 8Selecting previously unselected package x11-apps.
+Preparing to unpack .../x11-apps_7.7+5+nmu1ubuntu1_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 53%][49m[39m [####################################..............................] 8Unpacking x11-apps (7.7+5+nmu1ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 54%][49m[39m [#####################################.............................] 87[34;0f[42m[30mProgress: [ 55%][49m[39m [#####################################.............................] 8Selecting previously unselected package xbitmaps.
+Preparing to unpack .../xbitmaps_1.1.1-2_all.deb ...
+7[34;0f[42m[30mProgress: [ 56%][49m[39m [######################################............................] 8Unpacking xbitmaps (1.1.1-2) ...
+7[34;0f[42m[30mProgress: [ 58%][49m[39m [#######################################...........................] 87[34;0f[42m[30mProgress: [ 59%][49m[39m [########################################..........................] 8Processing triggers for systemd (229-4ubuntu12) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Setting up x11-common (1:7.7+13ubuntu3) ...
+7[34;0f[42m[30mProgress: [ 60%][49m[39m [########################################..........................] 8update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+7[34;0f[42m[30mProgress: [ 61%][49m[39m [#########################################.........................] 8Setting up libice6:amd64 (2:1.0.9-1) ...
+7[34;0f[42m[30mProgress: [ 62%][49m[39m [##########################################........................] 87[34;0f[42m[30mProgress: [ 63%][49m[39m [###########################################.......................] 8Setting up libsm6:amd64 (2:1.2.2-1) ...
+7[34;0f[42m[30mProgress: [ 65%][49m[39m [###########################################.......................] 87[34;0f[42m[30mProgress: [ 66%][49m[39m [############################################......................] 8Setting up libxfixes3:amd64 (1:5.0.1-2) ...
+7[34;0f[42m[30mProgress: [ 67%][49m[39m [#############################################.....................] 87[34;0f[42m[30mProgress: [ 68%][49m[39m [##############################################....................] 8Setting up libxrender1:amd64 (1:0.9.9-0ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 69%][49m[39m [###############################################...................] 87[34;0f[42m[30mProgress: [ 70%][49m[39m [###############################################...................] 8Setting up libxcursor1:amd64 (1:1.1.14-1) ...
+7[34;0f[42m[30mProgress: [ 72%][49m[39m [################################################..................] 87[34;0f[42m[30mProgress: [ 73%][49m[39m [#################################################.................] 8Setting up fonts-dejavu-core (2.35-1) ...
+7[34;0f[42m[30mProgress: [ 74%][49m[39m [##################################################................] 87[34;0f[42m[30mProgress: [ 75%][49m[39m [##################################################................] 8Setting up fontconfig-config (2.11.94-0ubuntu1.1) ...
+7[34;0f[42m[30mProgress: [ 76%][49m[39m [###################################################...............] 87[34;0f[42m[30mProgress: [ 77%][49m[39m [####################################################..............] 8Setting up libfontconfig1:amd64 (2.11.94-0ubuntu1.1) ...
+7[34;0f[42m[30mProgress: [ 79%][49m[39m [#####################################################.............] 87[34;0f[42m[30mProgress: [ 80%][49m[39m [#####################################################.............] 8Setting up libxft2:amd64 (2.3.2-1) ...
+7[34;0f[42m[30mProgress: [ 81%][49m[39m [######################################################............] 87[34;0f[42m[30mProgress: [ 82%][49m[39m [#######################################################...........] 8Setting up libxpm4:amd64 (1:3.5.11-1) ...
+7[34;0f[42m[30mProgress: [ 83%][49m[39m [########################################################..........] 87[34;0f[42m[30mProgress: [ 84%][49m[39m [#########################################################.........] 8Setting up libxt6:amd64 (1:1.1.5-0ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 86%][49m[39m [#########################################################.........] 87[34;0f[42m[30mProgress: [ 87%][49m[39m [##########################################################........] 8Setting up libxmu6:amd64 (2:1.1.2-2) ...
+7[34;0f[42m[30mProgress: [ 88%][49m[39m [###########################################################.......] 87[34;0f[42m[30mProgress: [ 89%][49m[39m [############################################################......] 8Setting up libxaw7:amd64 (2:1.0.13-1) ...
+7[34;0f[42m[30mProgress: [ 90%][49m[39m [############################################################......] 87[34;0f[42m[30mProgress: [ 91%][49m[39m [#############################################################.....] 8Setting up libxkbfile1:amd64 (1:1.0.9-0ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 93%][49m[39m [##############################################################....] 87[34;0f[42m[30mProgress: [ 94%][49m[39m [###############################################################...] 8Setting up x11-apps (7.7+5+nmu1ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 95%][49m[39m [###############################################################...] 87[34;0f[42m[30mProgress: [ 96%][49m[39m [################################################################..] 8Setting up xbitmaps (1.1.1-2) ...
+7[34;0f[42m[30mProgress: [ 97%][49m[39m [#################################################################.] 87[34;0f[42m[30mProgress: [ 98%][49m[39m [##################################################################] 8Processing triggers for systemd (229-4ubuntu12) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+
+7[0;34r8[1A[J]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ xlco[K[K[Kclock
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ g++ -c worms.[K12.cpp
+The program 'g++' is currently not installed. You can install it by typing:
+sudo apt install g++
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ sudo apt install g++
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 3%Reading state information... Done
+The following additional packages will be installed:
+  binutils cpp cpp-5 g++-5 gcc gcc-5 libasan2 libatomic1 libc-dev-bin libc6-dev
+  libcc1-0 libcilkrts5 libgcc-5-dev libgomp1 libisl15 libitm1 liblsan0 libmpc3 libmpx0
+  libquadmath0 libstdc++-5-dev libtsan0 libubsan0 linux-libc-dev manpages-dev
+Suggested packages:
+  binutils-doc cpp-doc gcc-5-locales g++-multilib g++-5-multilib gcc-5-doc
+  libstdc++6-5-dbg gcc-multilib make autoconf automake libtool flex bison gdb gcc-doc
+  gcc-5-multilib libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan2-dbg
+  liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg libmpx0-dbg libquadmath0-dbg
+  glibc-doc libstdc++-5-doc
+The following NEW packages will be installed:
+  binutils cpp cpp-5 g++ g++-5 gcc gcc-5 libasan2 libatomic1 libc-dev-bin libc6-dev
+  libcc1-0 libcilkrts5 libgcc-5-dev libgomp1 libisl15 libitm1 liblsan0 libmpc3 libmpx0
+  libquadmath0 libstdc++-5-dev libtsan0 libubsan0 linux-libc-dev manpages-dev
+0 upgraded, 26 newly installed, 0 to remove and 0 not upgraded.
+Need to get 37.2 MB of archives.
+After this operation, 139 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+[33m0% [Working][0m            Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libmpc3 amd64 1.0.3-1 [39.7 kB]
+[33m0% [1 libmpc3 0 B/39.7 kB 0%][0m[33m                             1% [Working][0m            Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 binutils amd64 2.26.1-1ubuntu1~16.04.3 [2,310 kB]
+[33m1% [2 binutils 0 B/2,310 kB 0%][0m[33m                               7% [Working][0m            Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libisl15 amd64 0.16.1-1 [524 kB]
+[33m7% [3 libisl15 0 B/524 kB 0%][0m[33m                             8% [Working][0m            Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 cpp-5 amd64 5.4.0-6ubuntu1~16.04.4 [7,653 kB]
+[33m8% [4 cpp-5 0 B/7,653 kB 0%][0m[33m                            26% [Working][0m             Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 cpp amd64 4:5.3.1-1ubuntu1 [27.7 kB]
+[33m26% [5 cpp 0 B/27.7 kB 0%][0m[33m                          27% [Working][0m             Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcc1-0 amd64 5.4.0-6ubuntu1~16.04.4 [38.8 kB]
+[33m27% [6 libcc1-0 0 B/38.8 kB 0%][0m[33m                               27% [Working][0m             Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgomp1 amd64 5.4.0-6ubuntu1~16.04.4 [55.0 kB]
+[33m27% [7 libgomp1 0 B/55.0 kB 0%][0m[33m                               28% [Working][0m             Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libitm1 amd64 5.4.0-6ubuntu1~16.04.4 [27.4 kB]
+[33m28% [8 libitm1 0 B/27.4 kB 0%][0m[33m                              29% [Working][0m             Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libatomic1 amd64 5.4.0-6ubuntu1~16.04.4 [8,912 B]
+[33m29% [9 libatomic1 0 B/8,912 B 0%][0m[33m                                 30% [Working][0m             Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasan2 amd64 5.4.0-6ubuntu1~16.04.4 [264 kB]
+[33m30% [10 libasan2 0 B/264 kB 0%][0m[33m                               31% [Working][0m             Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 liblsan0 amd64 5.4.0-6ubuntu1~16.04.4 [105 kB]
+[33m31% [11 liblsan0 0 B/105 kB 0%][0m[33m                               32% [Working][0m             Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtsan0 amd64 5.4.0-6ubuntu1~16.04.4 [244 kB]
+[33m32% [12 libtsan0 0 B/244 kB 0%][0m[33m                               34% [Working][0m             Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libubsan0 amd64 5.4.0-6ubuntu1~16.04.4 [95.3 kB]
+[33m34% [13 libubsan0 0 B/95.3 kB 0%][0m[33m                                 35% [Working][0m             Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcilkrts5 amd64 5.4.0-6ubuntu1~16.04.4 [40.1 kB]
+[33m35% [14 libcilkrts5 0 B/40.1 kB 0%][0m[33m                                   35% [Working][0m             Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmpx0 amd64 5.4.0-6ubuntu1~16.04.4 [9,766 B]
+[33m35% [15 libmpx0 0 B/9,766 B 0%][0m[33m                               36% [Working][0m             Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libquadmath0 amd64 5.4.0-6ubuntu1~16.04.4 [131 kB]
+[33m36% [16 libquadmath0 0 B/131 kB 0%][0m[33m                                   37% [Working][0m             Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgcc-5-dev amd64 5.4.0-6ubuntu1~16.04.4 [2,237 kB]
+[33m37% [17 libgcc-5-dev 0 B/2,237 kB 0%][0m[33m                                     43% [Working][0m             Get:18 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 gcc-5 amd64 5.4.0-6ubuntu1~16.04.4 [8,577 kB]
+[33m43% [18 gcc-5 0 B/8,577 kB 0%][0m[33m                              62% [Working][0m             Get:19 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 gcc amd64 4:5.3.1-1ubuntu1 [5,244 B]
+[33m62% [19 gcc 0 B/5,244 B 0%][0m[33m                           63% [Working][0m             Get:20 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc-dev-bin amd64 2.23-0ubuntu5 [68.7 kB]
+[33m63% [20 libc-dev-bin 0 B/68.7 kB 0%][0m[33m                                    64% [Working][0m             Err:21 http://security.ubuntu.com/ubuntu xenial-security/main amd64 linux-libc-dev amd64 4.4.0-53.74
+  404  Not Found [IP: 54.71.244.223 80]
+[33m64% [Working][0m             Get:22 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc6-dev amd64 2.23-0ubuntu5 [2,078 kB]
+[33m64% [22 libc6-dev 188 kB/2,078 kB 9%][0m[33m69% [Connecting to security.ubuntu.com (91.189.91.26)][0m                                                      Get:23 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libstdc++-5-dev amd64 5.4.0-6ubuntu1~16.04.4 [1,426 kB]
+[33m69% [Connecting to security.ubuntu.com (91.189.91.26)] [23 libstdc++-5-dev 0 B/1,426 kB[0m[33m                                                                                       73% [Connecting to security.ubuntu.com (91.189.91.26)][0m                                                      Get:24 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 g++-5 amd64 5.4.0-6ubuntu1~16.04.4 [8,300 kB]
+[33m73% [Connecting to security.ubuntu.com (91.189.91.26)] [24 g++-5 0 B/8,300 kB 0%][0m                                                                                 Err:21 http://security.ubuntu.com/ubuntu xenial-security/main amd64 linux-libc-dev amd64 4.4.0-53.74
+  404  Not Found [IP: 54.71.244.223 80]
+[33m                                                                                 89% [24 g++-5 7,498 kB/8,300 kB 90%][0m[33m                                    91% [Working][0m             Get:25 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 g++ amd64 4:5.3.1-1ubuntu1 [1,504 B]
+[33m91% [25 g++ 0 B/1,504 B 0%][0m[33m                           92% [Working][0m             Get:26 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 manpages-dev all 4.04-2 [2,048 kB]
+[33m92% [26 manpages-dev 0 B/2,048 kB 0%][0m[33m                                     97% [Working][0m             Fetched 36.3 MB in 0s (42.2 MB/s)
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-libc-dev_4.4.0-53.74_amd64.deb  404  Not Found [IP: 54.71.244.223 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ G[Kg++ -c worms12.cpp; ls -l worms*
+The program 'g++' is currently not installed. You can install it by typing:
+sudo apt install g++
+-rw-rw-r-- 1 ubuntu ubuntu 13933 Dec 23  2012 worms12.cpp
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ apt-get update
+W: chmod 0700 of directory /var/lib/apt/lists/partial failed - SetupAPTPartialDirectory (1: Operation not permitted)
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)
+W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ sudo apt-get update
+0% [Working]            Hit:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial InRelease
+0% [Connecting to security.ubuntu.com (91.189.88.149)]                                                      Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+0% [2 InRelease 40.3 kB/102 kB 39%] [Connecting to security.ubuntu.com (91.189.88.149)]0% [1 InRelease gpgv 247 kB] [2 InRelease 40.3 kB/102 kB 39%] [Connecting to security.u0% [1 InRelease gpgv 247 kB] [Waiting for headers] [Connecting to security.ubuntu.com (                                                                                       Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+0% [1 InRelease gpgv 247 kB] [3 InRelease 31.6 kB/102 kB 31%] [Connecting to security.u                                                                                       0% [1 InRelease gpgv 247 kB] [Connecting to security.ubuntu.com (91.189.88.149)]                                                                                0% [Connecting to security.ubuntu.com (91.189.88.149)]0% [2 InRelease gpgv 102 kB] [Waiting for headers] [Connecting to security.ubuntu.com (                                                                                       Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/main Sources [868 kB]
+0% [2 InRelease gpgv 102 kB] [4 Sources 26.6 kB/868 kB 3%] [Connecting to security.ubun                                                                                       0% [2 InRelease gpgv 102 kB] [Connecting to security.ubuntu.com (91.189.88.149)]                                                                                Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/restricted Sources [4,808 B]
+0% [2 InRelease gpgv 102 kB] [Waiting for headers] [Connecting to security.ubuntu.com (0% [4 Sources store 0 B] [2 InRelease gpgv 102 kB] [Waiting for headers] [Connecting to                                                                                       Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/universe Sources [7,728 kB]
+0% [4 Sources store 0 B] [2 InRelease gpgv 102 kB] [6 Sources 26.6 kB/7,728 kB 0%] [Con                                                                                       0% [4 Sources store 0 B] [6 Sources 4,219 kB/7,728 kB 55%] [Waiting for headers]0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [6 Sources 4,490 kB/7,728 kB 58%] [W                                                                                       Get:7 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [6 Sources 4,753 kB/7,728 kB 62%] [70% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [Waiting for headers] [7 InRelease 1                                                                                       Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial/multiverse Sources [179 kB]
+0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [8 Sources 26.6 kB/179 kB 15%] [7 In                                                                                       0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [7 InRelease 14.2 kB/102 kB 14%]                                                                                   Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main Sources [220 kB]
+0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [9 Sources 0 B/220 kB 0%] [7 InRelea                                                                                       0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [7 InRelease 14.2 kB/102 kB 14%]                                                                                   Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/restricted Sources [1,800 B]
+0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [Waiting for headers] [7 InRelease 4                                                                                       Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe Sources [121 kB]
+0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [11 Sources 11.4 kB/121 kB 9%] [7 In                                                                                       0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [7 InRelease 43.1 kB/102 kB 42%]                                                                                   Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/multiverse Sources [4,552 B]
+0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [Waiting for headers] [7 InRelease 4                                                                                       Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [459 kB]
+0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [13 Packages 261 kB/459 kB 57%] [7 I                                                                                       0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [7 InRelease 43.1 kB/102 kB 42%]                                                                                   Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main Translation-en [181 kB]
+0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [14 Translation-en 0 B/181 kB 0%] [7                                                                                       0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [7 InRelease 43.1 kB/102 kB 42%]                                                                                   Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [6,568 B]
+0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [Waiting for headers] [7 InRelease 4                                                                                       Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/restricted Translation-en [2,020 B]
+0% [4 Sources store 0 B] [3 InRelease gpgv 102 kB] [Waiting for headers] [7 InRelease 4                                                                                       0% [3 InRelease gpgv 102 kB] [Waiting for headers] [7 InRelease 43.1 kB/102 kB 42%]0% [5 Sources store 0 B] [3 InRelease gpgv 102 kB] [Waiting for headers] [7 InRelease 4                                                                                       0% [3 InRelease gpgv 102 kB] [Waiting for headers] [7 InRelease 43.1 kB/102 kB 42%]0% [6 Sources store 0 B] [3 InRelease gpgv 102 kB] [Waiting for headers] [7 InRelease 4                                                                                       Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [387 kB]
+0% [6 Sources store 0 B] [3 InRelease gpgv 102 kB] [17 Packages 25.9 kB/387 kB 7%] [7 I                                                                                       0% [6 Sources store 0 B] [3 InRelease gpgv 102 kB] [7 InRelease 43.1 kB/102 kB 42%]                                                                                   0% [6 Sources store 0 B] [7 InRelease 43.1 kB/102 kB 42%]                                                         Get:18 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe Translation-en [143 kB]
+0% [6 Sources store 0 B] [18 Translation-en 26.6 kB/143 kB 19%] [7 InRelease 43.1 kB/10                                                                                       0% [6 Sources store 0 B] [7 InRelease 43.1 kB/102 kB 42%]                                                         Get:19 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [8,080 B]
+0% [6 Sources store 0 B] [Waiting for headers] [7 InRelease 43.1 kB/102 kB 42%]                                                                               Get:20 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/multiverse Translation-en [3,580 B]
+0% [6 Sources store 0 B] [Waiting for headers] [7 InRelease 43.1 kB/102 kB 42%]                                                                               Get:21 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/main Sources [3,168 B]
+0% [6 Sources store 0 B] [Waiting for headers] [7 InRelease 43.1 kB/102 kB 42%]                                                                               Get:22 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/universe Sources [1,868 B]
+0% [6 Sources store 0 B] [Waiting for headers] [7 InRelease 43.1 kB/102 kB 42%]                                                                               Get:23 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [4,404 B]
+0% [6 Sources store 0 B] [Waiting for headers] [7 InRelease 43.1 kB/102 kB 42%]                                                                               Get:24 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/main Translation-en [3,124 B]
+0% [6 Sources store 0 B] [Waiting for headers] [7 InRelease 43.1 kB/102 kB 42%]                                                                               Get:25 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [2,412 B]
+0% [6 Sources store 0 B] [25 Packages 2,412 B/2,412 B 100%] [7 InRelease 43.1 kB/102 kB                                                                                       0% [6 Sources store 0 B] [Waiting for headers] [7 InRelease 43.1 kB/102 kB 42%]                                                                               Get:26 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/universe Translation-en [1,216 B]
+                                                                               0% [6 Sources store 0 B] [7 InRelease 43.1 kB/102 kB 42%]                                                         0% [6 Sources store 0 B]0% [6 Sources store 0 B] [7 InRelease gpgv 102 kB]                                                  89% [6 Sources store 0 B]                         Get:27 http://security.ubuntu.com/ubuntu xenial-security/main Sources [55.8 kB]
+89% [6 Sources store 0 B]                         Get:28 http://security.ubuntu.com/ubuntu xenial-security/restricted Sources [1,800 B]
+89% [6 Sources store 0 B] [Waiting for headers]                                               Get:29 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [18.5 kB]
+89% [6 Sources store 0 B] [Waiting for headers]                                               Get:30 http://security.ubuntu.com/ubuntu xenial-security/multiverse Sources [1,144 B]
+89% [6 Sources store 0 B] [Waiting for headers]                                               Get:31 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [202 kB]
+90% [6 Sources store 0 B] [31 Packages 116 kB/202 kB 57%]                                                         91% [6 Sources store 0 B]91% [Waiting for headers]91% [8 Sources store 0 B] [Waiting for headers]                                               91% [Waiting for headers]91% [9 Sources store 0 B] [Waiting for headers]                                               92% [Waiting for headers]92% [10 Sources store 0 B] [Waiting for headers]                                                92% [Waiting for headers]92% [11 Sources store 0 B] [Waiting for headers]                                                92% [Waiting for headers]92% [12 Sources store 0 B] [Waiting for headers]                                                92% [Waiting for headers]92% [13 Packages store 0 B] [Waiting for headers]                                                 Get:32 http://security.ubuntu.com/ubuntu xenial-security/main Translation-en [84.9 kB]
+93% [13 Packages store 0 B] [Waiting for headers]                                                 93% [Waiting for headers]93% [14 Translation-en store 0 B] [Waiting for headers]                                                       93% [Waiting for headers]93% [15 Packages store 0 B] [Waiting for headers]                                                 94% [Waiting for headers]94% [16 Translation-en store 0 B] [Waiting for headers]                                                       94% [Waiting for headers]94% [17 Packages store 0 B] [Waiting for headers]                                                 94% [Waiting for headers]94% [18 Translation-en store 0 B] [Waiting for headers]                                                       Get:33 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [6,568 B]
+94% [18 Translation-en store 0 B] [Waiting for headers]                                                       94% [Waiting for headers]94% [19 Packages store 0 B] [Waiting for headers]                                                 95% [Waiting for headers]95% [20 Translation-en store 0 B] [Waiting for headers]                                                       95% [Waiting for headers]95% [21 Sources store 0 B] [Waiting for headers]                                                95% [Waiting for headers]95% [22 Sources store 0 B] [Waiting for headers]                                                95% [Waiting for headers]95% [23 Packages store 0 B] [Waiting for headers]                                                 96% [Waiting for headers]96% [24 Translation-en store 0 B] [Waiting for headers]                                                       96% [Waiting for headers]96% [25 Packages store 0 B] [Waiting for headers]                                                 96% [Waiting for headers]96% [26 Translation-en store 0 B] [Waiting for headers]                                                       96% [Waiting for headers]96% [27 Sources store 0 B] [Waiting for headers]                                                97% [Waiting for headers]97% [28 Sources store 0 B] [Waiting for headers]                                                97% [Waiting for headers]97% [29 Sources store 0 B] [Waiting for headers]                                                97% [Waiting for headers]97% [30 Sources store 0 B] [Waiting for headers]                                                97% [Waiting for headers]97% [31 Packages store 0 B] [Waiting for headers]                                                 97% [Waiting for headers]97% [32 Translation-en store 0 B] [Waiting for headers]                                                       98% [Waiting for headers]98% [33 Packages store 0 B] [Waiting for headers]                                                 98% [Waiting for headers]                         Get:34 http://security.ubuntu.com/ubuntu xenial-security/restricted Translation-en [2,020 B]
+98% [Waiting for headers]98% [34 Translation-en store 0 B] [Waiting for headers]                                                       98% [Waiting for headers]                         Get:35 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [72.1 kB]
+99% [Waiting for headers]99% [35 Packages store 0 B] [Waiting for headers]                                                 99% [Waiting for headers]                         Get:36 http://security.ubuntu.com/ubuntu xenial-security/universe Translation-en [39.6 kB]
+99% [Waiting for headers]99% [36 Translation-en store 0 B] [Waiting for headers]                                                       99% [Waiting for headers]                         Get:37 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [2,744 B]
+100% [Waiting for headers]100% [37 Packages store 0 B] [Waiting for headers]                                                  100% [Waiting for headers]                          Get:38 http://security.ubuntu.com/ubuntu xenial-security/multiverse Translation-en [1,232 B]
+                          100% [Working]100% [38 Translation-en store 0 B]                                  100% [Working]              Fetched 11.1 MB in 2s (4,194 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 8%Reading package lists... 8%Reading package lists... 12%Reading package lists... 12%Reading package lists... 12%Reading package lists... 12%Reading package lists... 12%Reading package lists... 12%Reading package lists... 59%Reading package lists... 59%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ sudo apt install g++
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 3%Reading state information... Done
+The following additional packages will be installed:
+  binutils cpp cpp-5 g++-5 gcc gcc-5 libasan2 libatomic1 libc-dev-bin libc6-dev
+  libcc1-0 libcilkrts5 libgcc-5-dev libgomp1 libisl15 libitm1 liblsan0 libmpc3 libmpx0
+  libquadmath0 libstdc++-5-dev libtsan0 libubsan0 linux-libc-dev manpages-dev
+Suggested packages:
+  binutils-doc cpp-doc gcc-5-locales g++-multilib g++-5-multilib gcc-5-doc
+  libstdc++6-5-dbg gcc-multilib make autoconf automake libtool flex bison gdb gcc-doc
+  gcc-5-multilib libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan2-dbg
+  liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg libmpx0-dbg libquadmath0-dbg
+  glibc-doc libstdc++-5-doc
+The following NEW packages will be installed:
+  binutils cpp cpp-5 g++ g++-5 gcc gcc-5 libasan2 libatomic1 libc-dev-bin libc6-dev
+  libcc1-0 libcilkrts5 libgcc-5-dev libgomp1 libisl15 libitm1 liblsan0 libmpc3 libmpx0
+  libquadmath0 libstdc++-5-dev libtsan0 libubsan0 linux-libc-dev manpages-dev
+0 upgraded, 26 newly installed, 0 to remove and 75 not upgraded.
+Need to get 828 kB/37.1 MB of archives.
+After this operation, 139 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+[33m97% [Working][0m             Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 linux-libc-dev amd64 4.4.0-59.80 [828 kB]
+[33m97% [1 linux-libc-dev 0 B/828 kB 0%][0m[33m                                    100% [Working][0m              Fetched 828 kB in 0s (32.8 MB/s)
+
+7[0;33r8[1ASelecting previously unselected package libmpc3:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 54112 files and directories currently installed.)
+Preparing to unpack .../libmpc3_1.0.3-1_amd64.deb ...
+7[34;0f[42m[30mProgress: [  0%][49m[39m [..................................................................] 8Unpacking libmpc3:amd64 (1.0.3-1) ...
+7[34;0f[42m[30mProgress: [  1%][49m[39m [##................................................................] 87[34;0f[42m[30mProgress: [  2%][49m[39m [##................................................................] 8Selecting previously unselected package binutils.
+Preparing to unpack .../binutils_2.26.1-1ubuntu1~16.04.3_amd64.deb ...
+7[34;0f[42m[30mProgress: [  3%][49m[39m [###...............................................................] 8Unpacking binutils (2.26.1-1ubuntu1~16.04.3) ...
+7[34;0f[42m[30mProgress: [  4%][49m[39m [####..............................................................] 8Selecting previously unselected package libisl15:amd64.
+Preparing to unpack .../libisl15_0.16.1-1_amd64.deb ...
+7[34;0f[42m[30mProgress: [  5%][49m[39m [####..............................................................] 8Unpacking libisl15:amd64 (0.16.1-1) ...
+7[34;0f[42m[30mProgress: [  6%][49m[39m [#####.............................................................] 8Selecting previously unselected package cpp-5.
+Preparing to unpack .../cpp-5_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [  7%][49m[39m [######............................................................] 8Unpacking cpp-5 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [  8%][49m[39m [######............................................................] 87[34;0f[42m[30mProgress: [  9%][49m[39m [#######...........................................................] 8Selecting previously unselected package cpp.
+Preparing to unpack .../cpp_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking cpp (4:5.3.1-1ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 10%][49m[39m [########..........................................................] 87[34;0f[42m[30mProgress: [ 11%][49m[39m [########..........................................................] 8Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../libcc1-0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 12%][49m[39m [#########.........................................................] 8Unpacking libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 13%][49m[39m [##########........................................................] 8Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../libgomp1_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 14%][49m[39m [##########........................................................] 8Unpacking libgomp1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 15%][49m[39m [###########.......................................................] 87[34;0f[42m[30mProgress: [ 16%][49m[39m [###########.......................................................] 8Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../libitm1_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libitm1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 17%][49m[39m [############......................................................] 87[34;0f[42m[30mProgress: [ 18%][49m[39m [#############.....................................................] 8Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../libatomic1_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 19%][49m[39m [#############.....................................................] 8Unpacking libatomic1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 20%][49m[39m [##############....................................................] 8Selecting previously unselected package libasan2:amd64.
+Preparing to unpack .../libasan2_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 21%][49m[39m [###############...................................................] 8Unpacking libasan2:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 22%][49m[39m [###############...................................................] 8Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../liblsan0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 23%][49m[39m [################..................................................] 8Unpacking liblsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 24%][49m[39m [#################.................................................] 87[34;0f[42m[30mProgress: [ 25%][49m[39m [#################.................................................] 8Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../libtsan0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libtsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 26%][49m[39m [##################................................................] 87[34;0f[42m[30mProgress: [ 27%][49m[39m [###################...............................................] 8Selecting previously unselected package libubsan0:amd64.
+Preparing to unpack .../libubsan0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 28%][49m[39m [###################...............................................] 8Unpacking libubsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 29%][49m[39m [####################..............................................] 8Selecting previously unselected package libcilkrts5:amd64.
+Preparing to unpack .../libcilkrts5_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 30%][49m[39m [#####################.............................................] 8Unpacking libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 31%][49m[39m [#####################.............................................] 87[34;0f[42m[30mProgress: [ 32%][49m[39m [######################............................................] 8Selecting previously unselected package libmpx0:amd64.
+Preparing to unpack .../libmpx0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libmpx0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 33%][49m[39m [#######################...........................................] 87[34;0f[42m[30mProgress: [ 34%][49m[39m [#######################...........................................] 8Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../libquadmath0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 35%][49m[39m [########################..........................................] 8Unpacking libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 36%][49m[39m [#########################.........................................] 8Selecting previously unselected package libgcc-5-dev:amd64.
+Preparing to unpack .../libgcc-5-dev_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 37%][49m[39m [#########################.........................................] 8Unpacking libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 38%][49m[39m [##########################........................................] 8Selecting previously unselected package gcc-5.
+Preparing to unpack .../gcc-5_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 39%][49m[39m [###########################.......................................] 8Unpacking gcc-5 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 40%][49m[39m [###########################.......................................] 87[34;0f[42m[30mProgress: [ 41%][49m[39m [############################......................................] 8Selecting previously unselected package gcc.
+Preparing to unpack .../gcc_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking gcc (4:5.3.1-1ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 42%][49m[39m [#############################.....................................] 87[34;0f[42m[30mProgress: [ 43%][49m[39m [#############################.....................................] 8Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../libc-dev-bin_2.23-0ubuntu5_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 44%][49m[39m [##############################....................................] 8Unpacking libc-dev-bin (2.23-0ubuntu5) ...
+7[34;0f[42m[30mProgress: [ 45%][49m[39m [##############################....................................] 8Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../linux-libc-dev_4.4.0-59.80_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 46%][49m[39m [###############################...................................] 8Unpacking linux-libc-dev:amd64 (4.4.0-59.80) ...
+7[34;0f[42m[30mProgress: [ 47%][49m[39m [################################..................................] 87[34;0f[42m[30mProgress: [ 48%][49m[39m [################################..................................] 8Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../libc6-dev_2.23-0ubuntu5_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.23-0ubuntu5) ...
+7[34;0f[42m[30mProgress: [ 49%][49m[39m [#################################.................................] 87[34;0f[42m[30mProgress: [ 50%][49m[39m [##################################................................] 8Selecting previously unselected package libstdc++-5-dev:amd64.
+Preparing to unpack .../libstdc++-5-dev_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 51%][49m[39m [##################################................................] 8Unpacking libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 52%][49m[39m [###################################...............................] 8Selecting previously unselected package g++-5.
+Preparing to unpack .../g++-5_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 53%][49m[39m [####################################..............................] 8Unpacking g++-5 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 54%][49m[39m [####################################..............................] 8Selecting previously unselected package g++.
+Preparing to unpack .../g++_4%3a5.3.1-1ubuntu1_amd64.deb ...
+7[34;0f[42m[30mProgress: [ 55%][49m[39m [#####################################.............................] 8Unpacking g++ (4:5.3.1-1ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 56%][49m[39m [######################################............................] 87[34;0f[42m[30mProgress: [ 57%][49m[39m [######################################............................] 8Selecting previously unselected package manpages-dev.
+Preparing to unpack .../manpages-dev_4.04-2_all.deb ...
+7[34;0f[42m[30mProgress: [ 58%][49m[39m [#######################################...........................] 8Unpacking manpages-dev (4.04-2) ...
+7[34;0f[42m[30mProgress: [ 59%][49m[39m [########################################..........................] 8Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libmpc3:amd64 (1.0.3-1) ...
+7[34;0f[42m[30mProgress: [ 60%][49m[39m [########################################..........................] 87[34;0f[42m[30mProgress: [ 61%][49m[39m [#########################################.........................] 8Setting up binutils (2.26.1-1ubuntu1~16.04.3) ...
+7[34;0f[42m[30mProgress: [ 62%][49m[39m [##########################################........................] 8Setting up libisl15:amd64 (0.16.1-1) ...
+7[34;0f[42m[30mProgress: [ 63%][49m[39m [##########################################........................] 87[34;0f[42m[30mProgress: [ 64%][49m[39m [###########################################.......................] 8Setting up cpp-5 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 65%][49m[39m [############################################......................] 8Setting up cpp (4:5.3.1-1ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 66%][49m[39m [############################################......................] 87[34;0f[42m[30mProgress: [ 67%][49m[39m [#############################################.....................] 8Setting up libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 68%][49m[39m [##############################################....................] 8Setting up libgomp1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 69%][49m[39m [##############################################....................] 87[34;0f[42m[30mProgress: [ 70%][49m[39m [###############################################...................] 8Setting up libitm1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 71%][49m[39m [################################################..................] 8Setting up libatomic1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 72%][49m[39m [################################################..................] 87[34;0f[42m[30mProgress: [ 73%][49m[39m [#################################################.................] 8Setting up libasan2:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 74%][49m[39m [#################################################.................] 8Setting up liblsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 75%][49m[39m [##################################################................] 87[34;0f[42m[30mProgress: [ 76%][49m[39m [###################################################...............] 8Setting up libtsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 77%][49m[39m [###################################################...............] 8Setting up libubsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 78%][49m[39m [####################################################..............] 87[34;0f[42m[30mProgress: [ 79%][49m[39m [#####################################################.............] 8Setting up libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 80%][49m[39m [#####################################################.............] 8Setting up libmpx0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 81%][49m[39m [######################################################............] 87[34;0f[42m[30mProgress: [ 82%][49m[39m [#######################################################...........] 8Setting up libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 83%][49m[39m [#######################################################...........] 8Setting up libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 84%][49m[39m [########################################################..........] 87[34;0f[42m[30mProgress: [ 85%][49m[39m [#########################################################.........] 8Setting up gcc-5 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 86%][49m[39m [#########################################################.........] 87[34;0f[42m[30mProgress: [ 87%][49m[39m [##########################################################........] 8Setting up gcc (4:5.3.1-1ubuntu1) ...
+7[34;0f[42m[30mProgress: [ 88%][49m[39m [###########################################################.......] 8Setting up libc-dev-bin (2.23-0ubuntu5) ...
+7[34;0f[42m[30mProgress: [ 89%][49m[39m [###########################################################.......] 87[34;0f[42m[30mProgress: [ 90%][49m[39m [############################################################......] 8Setting up linux-libc-dev:amd64 (4.4.0-59.80) ...
+7[34;0f[42m[30mProgress: [ 91%][49m[39m [#############################################################.....] 8Setting up libc6-dev:amd64 (2.23-0ubuntu5) ...
+7[34;0f[42m[30mProgress: [ 92%][49m[39m [#############################################################.....] 87[34;0f[42m[30mProgress: [ 93%][49m[39m [##############################################################....] 8Setting up libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 94%][49m[39m [###############################################################...] 8Setting up g++-5 (5.4.0-6ubuntu1~16.04.4) ...
+7[34;0f[42m[30mProgress: [ 95%][49m[39m [###############################################################...] 87[34;0f[42m[30mProgress: [ 96%][49m[39m [################################################################..] 8Setting up g++ (4:5.3.1-1ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+7[34;0f[42m[30mProgress: [ 97%][49m[39m [#################################################################.] 8Setting up manpages-dev (4.04-2) ...
+7[34;0f[42m[30mProgress: [ 98%][49m[39m [#################################################################.] 87[34;0f[42m[30mProgress: [ 99%][49m[39m [##################################################################] 8Processing triggers for libc-bin (2.23-0ubuntu5) ...
+
+7[0;34r8[1A[J]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ g++ -c worms12.cpp
+[01m[Kworms12.cpp:103:21:[m[K [01;31m[Kfatal error: [m[Kncurses.h: No such file or directory
+compilation terminated.
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ g++ -c worms12.cpp; ls-[K -l wormss*[K[K*
+[01m[Kworms12.cpp:103:21:[m[K [01;31m[Kfatal error: [m[Kncurses.h: No such file or directory
+compilation terminated.
+-rw-rw-r-- 1 ubuntu ubuntu 13933 Dec 23  2012 worms12.cpp
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ g++ worms12.o ;[K-l ncurses -o worms 12[K[K[K12
+[01m[Kg++:[m[K [01;31m[Kerror: [m[Kworms12.o: No such file or directory
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ =g++ -c worms12/[K.cpp; ls -l worms*= <= g++ worms12.o -l ncurse s -o worms12=
+No command '=g++' found, did you mean:
+ Command 'g++' from package 'g++' (main)
+ Command 'ag++' from package 'aspectc++' (universe)
+=g++: command not found
+-bash: =: No such file or directory
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ =g++ -c worms12.cpp; ls -l worms*= <= g++ worms12.o -l ncursess -o worms12=[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\g++ -c worms12.cpp; ls -l worms*= <= g++ worms12.o -l ncurse[1@s[A]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ [C[Cg++ -c worms12.cpp; ls -l worms*= <= g++ worms12.o -l ncurses[1P[A]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ [Cg++ -c worms12.cpp; ls -l worms*= <= g++ worms12.o -l ncurses [1P[A]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ 
+
+[01m[Kworms12.cpp:103:21:[m[K [01;31m[Kfatal error: [m[Kncurses.h: No such file or directory
+compilation terminated.
+-bash: =: No such file or directory
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ g++ -o worms12 -lnu[K[K ncurses worms.cpp[K[K[K[K12.cpp
+[01m[Kworms12.cpp:103:21:[m[K [01;31m[Kfatal error: [m[Kncurses.h: No such file or directory
+compilation terminated.
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ g++ -o worms12 -l ncurses worms12.cpp[1P[1P[1@c[1@c[C[C[C[1P[1@g[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1@-[1@W[1@a[1@l[1@l[C[C[C[C[C[C[C[C[C[C[C[C-worms12.cppoworms12.cpp worms12.cpp[Cworms12.cppoworms12.cpprworms12.cppmworms12.cppsworms12.cpp1worms12.cpp2worms12.cpp worms12.cpp[C[C[1P[1P[1@+[1@+
+[01m[Kworms12.cpp:103:21:[m[K [01;31m[Kfatal error: [m[Kncurses.h: No such file or directory
+compilation terminated.
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ wget https://drive.google.com/open?id=0BxLxA3AhetqsNmtVcFdRT2 EzdXc
+--2017-01-27 04:56:20--  https://drive.google.com/open?id=0BxLxA3AhetqsNmtVcFdRT2EzdXc
+Resolving drive.google.com (drive.google.com)... 172.217.3.174, 2607:f8b0:400a:800::200e
+Connecting to drive.google.com (drive.google.com)|172.217.3.174|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://drive.google.com/folderview?id=0BxLxA3AhetqsNmtVcFdRT2EzdXc&usp=drive_web [following]
+--2017-01-27 04:56:21--  https://drive.google.com/folderview?id=0BxLxA3AhetqsNmtVcFdRT2EzdXc&usp=drive_web
+Reusing existing connection to drive.google.com:443.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://drive.google.com/drive/folders/0BxLxA3AhetqsNmtVcFdRT2EzdXc?usp=drive_web [following]
+--2017-01-27 04:56:21--  https://drive.google.com/drive/folders/0BxLxA3AhetqsNmtVcFdRT2EzdXc?usp=drive_web
+Reusing existing connection to drive.google.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘open?id=0BxLxA3AhetqsNmtVcFdRT2EzdXc’
+
+           open?id=0B     [<=>                       ]       0  --.-KB/s                         open?id=0Bx     [ <=>                      ] 112.48K   354KB/s               open?id=0BxLxA3Ahetqs     [  <=>                     ] 132.54K   417KB/s    in 0.3s    
+
+2017-01-27 04:56:21 (417 KB/s) - ‘open?id=0BxLxA3AhetqsNmtVcFdRT2EzdXc’ saved [135720]
+
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ exit
+logout
+Connection to ec2-54-213-198-66.us-west-2.compute.amazonaws.com closed.
+]0;bluzix@behemoth: ~/Documents/MobileComp/P1bluzix@behemoth:~/Documents/MobileComp/P1$ exit
+exit
+
+Script done on Thu 26 Jan 2017 11:58:29 PM EST

@@ -1,0 +1,24 @@
+Script started on Thu 26 Jan 2017 11:59:51 PM EST
+]0;bluzix@behemoth: ~/Documents/MobileComp/P1bluzix@behemoth:~/Documents/MobileComp/P1$ exitssh -X -i ~/Keystore/EC2/slincoln-ceg3900-aws--ec2-key.pem ubuntu@ec2-54-213-198-66.us-west-2.compute.amazonaws.com
+Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-53-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+64 packages can be updated.
+20 updates are security updates.
+
+
+Last login: Fri Jan 27 04:22:07 2017 from 69.81.74.112
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ xcl[Kalx[Kc
+Warning: Cannot convert string "-adobe-symbol-*-*-*-*-*-120-*-*-*-*-*-*" to type FontStruct
+]0;ubuntu@ip-172-31-22-202: ~ubuntu@ip-172-31-22-202:~$ Connection to ec2-54-213-198-66.us-west-2.compute.amazonaws.com closed by remote host.
+Connection to ec2-54-213-198-66.us-west-2.compute.amazonaws.com closed.
+]0;bluzix@behemoth: ~/Documents/MobileComp/P1bluzix@behemoth:~/Documents/MobileComp/P1$ exit
+exit
+
+Script done on Fri 27 Jan 2017 12:01:56 AM EST

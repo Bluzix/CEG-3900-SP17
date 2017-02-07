@@ -1,0 +1,32 @@
+Script started on Thu 26 Jan 2017 09:56:19 PM EST
+]0;bluzix@behemoth: ~/Documents/MobileComp/P1bluzix@behemoth:~/Documents/MobileComp/P1$ adb shell
+shell@TB3-850F:/ $ mount
+rootfs / rootfs ro,seclabel 0 0
+tmpfs /dev tmpfs rw,seclabel,nosuid,relatime,mode=755 0 0
+devpts /dev/pts devpts rw,seclabel,relatime,mode=600 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,seclabel,relatime 0 0
+selinuxfs /sys/fs/selinux selinuxfs rw,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,seclabel,relatime 0 0
+none /acct cgroup rw,relatime,cpuacct 0 0
+none /sys/fs/cgroup tmpfs rw,seclabel,relatime,mode=750,gid=1000 0 0
+tmpfs /mnt tmpfs rw,seclabel,relatime,mode=755,gid=1000 0 0
+none /dev/cpuctl cgroup rw,relatime,cpu 0 0
+pstore /sys/fs/pstore pstore rw,seclabel,relatime 0 0
+/dev/block/dm-0 /system ext4 ro,seclabel,relatime,data=ordered 0 0
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cache /cache ext4 rw,seclabel,nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered 0 0
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/protect1 /protect_f ext4 rw,seclabel,nosuid,nodev,noatime,nodelalloc,noauto_da_alloc,commit=1,data=ordered 0 0
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/protect2 /protect_s ext4 rw,seclabel,nosuid,nodev,noatime,nodelalloc,noauto_da_alloc,commit=1,data=ordered 0 0
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/nvdata /nvdata ext4 rw,seclabel,nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered 0 0
+adb /dev/usb-ffs/adb functionfs rw,relatime 0 0
+tmpfs /storage tmpfs rw,seclabel,relatime,mode=755,gid=1000 0 0
+/dev/block/dm-1 /data ext4 rw,seclabel,nosuid,nodev,noatime,discard,noauto_da_alloc,resuid=10010,data=ordered 0 0
+/dev/fuse /mnt/runtime/default/emulated fuse rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /storage/emulated fuse rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /mnt/runtime/read/emulated fuse rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /mnt/runtime/write/emulated fuse rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+shell@TB3-850F:/ $ exit
+]0;bluzix@behemoth: ~/Documents/MobileComp/P1bluzix@behemoth:~/Documents/MobileComp/P1$ exit
+exit
+
+Script done on Thu 26 Jan 2017 09:57:10 PM EST
