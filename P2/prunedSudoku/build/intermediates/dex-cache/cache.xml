@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/bluzix/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.1.1_2c03b6f50447ac0f737b1b6e080dfb12b450fb4f/classes.dex" />
+    </item>
+    <item
+        jar="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.1.1_a045ed1fb2d1aa3654de9dc51546bbfcec0565df/classes.dex" />
+    </item>
+    <item
+        jar="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="3ac8a3874210445d32545f011522d9431536d940">
+        <dex dex="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_cf878cd092bc8fb765c4a1a40b638eb3e2a615bb/classes.dex" />
+    </item>
+    <item
+        jar="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.1.1_68557b9dde1983409a115a75c45813ebb3ffc131/classes.dex" />
+    </item>
+    <item
+        jar="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.1.1_2c20df55e20dbc2311ac5e22b447faad12de7f8a/classes.dex" />
+    </item>
+    <item
+        jar="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="e3e78b29542bc22d6b585a055efc714b5e3ba206">
+        <dex dex="/home/bluzix/Documents/MobileComp/P2/P2/prunedSudoku/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7fbe70440408ad33108435ba028d762fefe551e1/classes.dex" />
+    </item>
+
+</items>
