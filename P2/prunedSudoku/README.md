@@ -1,4 +1,5 @@
 # Pruned Sudoku
+
 [Pruned Sudoku](https://github.com/Bluzix/CEG-3900-SP17) is a modified version of Open Sudoku.  This version has been heavily trimmed to only throw numbers onto a 9 by 9 grid.  It will be used as a base to create a collaborative Sudoku app with FireBase.
 
 You cannot find Pruned Sudoku on Google Play.
