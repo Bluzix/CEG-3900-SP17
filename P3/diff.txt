@@ -1,0 +1,85 @@
+43a44,45
+> import junit.framework.Assert;
+> 
+89a92,105
+>     /**
+>      * Process Un/Liking a post.
+>      * <p>
+>      *     This is the implementation of the onPostLike method located in the OnPostSelectedListener
+>      *     interface inside of PostFragment.  This method communicates with Firebase to like or
+>      *     unlike a post that has been stored in Firebase.
+>      * </p>
+>      * <p>
+>      *     PreCondition: this method is called from the FeedActivity on a post being displayed
+>      *     PostCondition: Firebase's database will reflect the action of Liking or Unliking a
+>      *     the post.
+>      * </p>
+>      * @param postKey Non-null String that is the unique Key for a post inside of Firebase.
+>      */
+91a108,109
+>         Assert.assertFalse( "postKey was null or empty", postKey == null || postKey.isEmpty() );
+> 
+92a111,113
+>         Assert.assertFalse( "Current User Id was null or empty", userKey == null ||
+>                 userKey.isEmpty() );
+> 
+93a115,117
+>         Assert.assertNotNull( "Reference to post Likes was null", postLikesRef );
+> 
+>         // We now attach a ValueEventListener to observe if the Current User Likes or unlikes the post
+94a119,139
+> 
+>             /**
+>              * Update posts based on values currently in Firebase.
+>              * <p>
+>              *     When the Current User uses the outer function to Like or Unlike a post, we need
+>              *     to update the post in Firebase to reflect the changes the User wants to perform
+>              *     on the app.
+>              * </p>
+>              * <p>
+>              *     We use onDataChange( DataSnapshot ) to read the contents of Firebase.
+>              * </p>
+>              * <p>
+>              *     PreCondition: this function is called from a ValueEventListener that is added to
+>              *     the Firebase database branch that is responsible for storing the Like that the
+>              *     Current User wants to add to or remove from the selected post.
+>              *     PostCondition: A Like has been recorded into Firebase, or it has been removed
+>              *     from Firebase.
+>              * </p>
+>              * @param dataSnapshot Non-null DataSnapshot of the Current User's Like or lack of a
+>              *                     Like for a certain post.
+>              */
+96a142,144
+>                 Assert.assertNotNull( "DataSnapshot was null", dataSnapshot);
+> 
+>                 // if dataSnapshot.exists() is true, then the User wants to unlike the post
+100c148,155
+<                 } else {
+---
+>                 }
+> 
+>                 // else the User has not Liked the post and wishes to Like the post now
+>                 else {
+>                     /* ServerValue is a class in com.google.firebase.database and is assumed that it
+>                      * has an accessible TIMESTAMP value that does not return a null or empty
+>                      * String.
+>                      */
+104a160,177
+>             /**
+>              * Ignore Firebase Database Errors
+>              * <p>
+>              *     onCancelled is usually triggered as a result of a failure to communicate with the
+>              *     Firebase Database, or communication was reject due to the set database rules.
+>              *     However, this function has nothing in its definition; so all Database Errors are
+>              *     ignored for Un/Liking a post.
+>              * </p>
+>              * <p>
+>              *     PreCondition: this function is called from a ValueEventListener that is added to
+>              *     the Firebase database branch that is responsible for storing the Like that the
+>              *     Current User wants to add to or remove from the selected post.
+>              *     PostCondition: nothing will happen; this function does nothing with the
+>              *     DatabaseError that it has been given.
+>              * </p>
+>              * @param firebaseError A DatabaseError from Firebase, can be non-null since it is not
+>              *                      acted upon in this function.
+>              */
