@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Password Help</string>
+    <string name="blank_password">Blank</string>
+    <string name="bad_password">Bad</string>
+    <string name="pass_password">Pass</string>
+
+    <string name="blank_hint">You need to enter a Password first before you try to check it.</string>
+    <string name="match_hint">Your password is the same as the one found in a few word lists.</string>
+    <string name="pass_hint">Your password was not found in the top 100000 used passwords.</string>
+</resources>

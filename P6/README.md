@@ -1,0 +1,17 @@
+# P6 - Cloud Computing of Password Complexity
+This lab was used to show us how John-the-Ripper, Hashcat, and using Docker & Painbow to create Rainbow Tables.  This lab also introduced another part of P5's Password-Help Android app, where I was supposed to make it display password strength metrics.
+
+## Task 1 - Password Complexity Check with John-the-Ripper
+In this Task I was given etc-shadow-2009.txt file to crack using [John-the-Ripper](https://github.com/magnumripper/JohnTheRipper), which can be installed through `apt-get install john`.  I first tested john on the testJTR file, and I was able to crack that guest password in nearly an instant.  I want to note that the file I was given was already ran through the `unshadow` feature of john.  Another part of this Task was to break up the etc-shadow-2009.txt file into four parts and run john on four different cloud instances.  However, I only got around to breaking up the large text file: shadowA.txt, shadowB.txt, shadowC.txt, and shadowD.txt.  I didn't managed to create an app to start the four cloud instances, and I don't have those instances running on the cloud.
+
+## Task 2 - Hashcat
+This Task made us install Hashcat on our computer and use it to break some MD5 hashes that our professor gave us.  We first tried to install it through `apt-get install hashcat`, but I ended up downloading the Hashcat binary from [their website](https://hashcat.net/hashcat/).  We then had to understand how Hashcat worked, which I learned through a [Hashcat wiki](https://hashcat.net/wiki/doku.php?id=hashcat#options).  The second to last part of this Task was to use Hashcat to break the MD5 hashes in hashes-md5.txt, and the wordlist to use to crack them is called rockyou and it should be hosted somewhere on the internet.  Then I had to create an APK that would have used SSH to run Hashcat on my laptop and display the result in the Android app.  Though, I didn't get around to doing that part.
+
+## Task 3 - Computing Rainbow Tables in the Cloud
+This Task was the last part of Task 2 but done over the cloud.  Instead of the Android app using SSH to connect to my laptop, the Android app should connect to a cloud computer instance and run Hashcat on that instance.  I didn't get around to doing this one either.
+
+## Task 4 - Using Docker for Rainbow Tables
+In this Task we downloaded a Scalable Rainbow Table Creator called [Painbow](https://github.com/mcandre/painbow).  Painbow does make use of features from [Apache Cassandra](http://cassandra.apache.org/download/); but instead of installing Cassandra, we were going to use Docker to run Painbow.  Docker can be downloaded easily through `apt-get install docker.io`.  The entire class had a ton of trouble getting this to work, so our professor just ended up making us a [guide for using Docker](http://cecs.wright.edu/~pmateti/Courses/3900/Lectures/Assignments/Painbow/painbow-cassandra.html).
+
+## Task 5 - Password Help APK
+This Task was a continuation of Task 5 of P5.  I did get started on this, and the PasswordHelp directory holds my source code for the app.  I managed to create an app that checks if the given password is one found on a wordlist of the top 100000 passwords used.  I did not get around to finishing this part of the Task which was adding a [password strength estimator](https://github.com/GoSimpleLLC/nbvcxz) to the APK.
